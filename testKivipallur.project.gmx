@@ -8,7 +8,9 @@
   <sprites name="sprites">
     <sprite>sprites\sprite0</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\background0</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\script0.gml</script>
