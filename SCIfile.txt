@@ -1,0 +1,4 @@
+Ker7
+-1
+Kivipallurid7
+True
