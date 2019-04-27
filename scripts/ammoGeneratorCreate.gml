@@ -1,17 +1,11 @@
 show_debug_message("Init AmmoGen");
-
-// decide when next throw occurs
-
-nextEvent = script_execute(getTimestamp, 100, 200);
-show_debug_message("Set next event to " + string(nextEvent));
-
+ii = 0;
+// init event data structures
+event_id_list = ds_list_create();
+event_map = ds_map_create();
 
 
-//typesmap = ds_map_create();
-
-// Add all types
-//ds_map_add()
-
+script_execute(scheduleOneEvent, ammo);
 
 
 

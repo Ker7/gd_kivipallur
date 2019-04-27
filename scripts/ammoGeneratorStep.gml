@@ -1,13 +1,29 @@
 // event scheduled for this step?
 
+// Schedule new events if there are none!
+if ds_list_empty(event_id_list){
+    //How many to schedule?
+    difficulty_mod = max(1, (global.c div 1000))
+    var ammo_count = irandom_range(1,2) * difficulty_mod
+    show_debug_message("Difficulty="+ string(difficulty_mod) +", Scheduling " + string(ammo_count) + " new events");
+    for (var i = 0; i < ammo_count; i++;){
+        script_execute(scheduleOneEvent, ammo);
+    }
+
+}
 
 
-if (nextEvent == global.c){
+// Spawn ammo if an event has been scheduled for this timestamp
+if (ds_list_find_value(event_id_list, 0) <= global.c){
     show_debug_message("New event");
     
     script_execute(spawnAmmoInstance, ammo);
+    //remove from datastructures
+    ds_list_delete(event_id_list, 0)
+    ds_map_delete(event_map, global.c)
     
-    // Schedule another event
-    nextEvent = script_execute(getTimestamp, 50, 150);
+    
+    
+    
     
 }
