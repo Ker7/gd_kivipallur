@@ -21,7 +21,6 @@
     <path>paths\path0</path>
   </paths>
   <scripts name="scripts">
-    <script>scripts\ammoCreate.gml</script>
     <scripts name="player">
       <script>scripts\playerCreate.gml</script>
       <script>scripts\playerStep.gml</script>
@@ -40,9 +39,10 @@
       <script>scripts\sysCreate.gml</script>
     </scripts>
     <scripts name="ammo">
+      <script>scripts\ammoCreate.gml</script>
+      <script>scripts\ammoStep.gml</script>
       <script>scripts\ammoDraw.gml</script>
       <script>scripts\spawnAmmoInstance.gml</script>
-      <script>scripts\ammoStep.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">

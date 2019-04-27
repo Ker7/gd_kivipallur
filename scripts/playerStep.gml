@@ -40,9 +40,10 @@ if keyboard_check_pressed( btnSend ) {
 
 
 //Testarea DEBUG BUILD STUFF
-if keyboard_check_pressed(ord('S')) {
-    with (instance_create(850, 639-32-64, ammo1)) {
-        path_start(path0, 8 ,path_action_stop, false);
-        path_scale = ((85+random(30))/100);
+if keyboard_check(ord('S')) {
+    with (instance_create(850, 639-32-64, ammo)) {
+        sys.ammoCount += 1;
+        //path_start(path0, 8 ,path_action_stop, false);
+        //path_scale = ((85+random(30))/100);
     }
 }

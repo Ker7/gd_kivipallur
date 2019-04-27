@@ -8,6 +8,7 @@ ammoCount = 0       // Shots fired
 
 // World creation
 obj_player = instance_create(200,600,player)
+//instance_create(200,600,ammoGenerator)
 
 
 obj_player.iq = 147;

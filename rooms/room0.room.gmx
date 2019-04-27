@@ -52,7 +52,6 @@
   </views>
   <instances>
     <instance objName="sys" x="192" y="128" name="inst_E41DE870" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ammoGenerator" x="256" y="160" name="inst_608E0E00" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
