@@ -19,18 +19,26 @@
     <script>scripts\sysStep.gml</script>
     <script>scripts\sysDraw.gml</script>
     <script>scripts\sysDrawGUI.gml</script>
-    <script>scripts\playerCreate.gml</script>
-    <script>scripts\playerStep.gml</script>
-    <script>scripts\playerDraw.gml</script>
     <script>scripts\ammoStep.gml</script>
     <script>scripts\ammoDraw.gml</script>
+    <scripts name="player">
+      <script>scripts\playerDraw.gml</script>
+      <script>scripts\playerStep.gml</script>
+      <script>scripts\playerCreate.gml</script>
+    </scripts>
+    <scripts name="ammoGenerator">
+      <script>scripts\ammoGeneratorCreate.gml</script>
+      <script>scripts\ammoGeneratorStep.gml</script>
+      <script>scripts\getTimestamp.gml</script>
+      <script>scripts\spawnAmmoInstance.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\sys</object>
     <object>objects\player</object>
     <object>objects\ammo</object>
+    <object>objects\ammoGenerator</object>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>

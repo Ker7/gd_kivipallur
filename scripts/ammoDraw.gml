@@ -1,1 +1,1 @@
-draw_sprite(sprAmmo1,sys.c,x,y)
+draw_sprite(sprAmmo1,global.c,x,y)
