@@ -18,6 +18,7 @@
     <sprite>sprites\sprPlayerHead</sprite>
     <sprite>sprites\sprAmmo1</sprite>
     <sprite>sprites\sprAmmo2</sprite>
+    <sprite>sprites\sprKickR</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>

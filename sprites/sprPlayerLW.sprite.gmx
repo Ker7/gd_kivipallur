@@ -3,13 +3,13 @@
   <type>0</type>
   <xorig>190</xorig>
   <yorigin>365</yorigin>
-  <colkind>1</colkind>
-  <coltolerance>0</coltolerance>
-  <sepmasks>0</sepmasks>
+  <colkind>0</colkind>
+  <coltolerance>23</coltolerance>
+  <sepmasks>-1</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>80</bbox_left>
-  <bbox_right>298</bbox_right>
-  <bbox_top>39</bbox_top>
+  <bbox_left>93</bbox_left>
+  <bbox_right>297</bbox_right>
+  <bbox_top>40</bbox_top>
   <bbox_bottom>371</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>

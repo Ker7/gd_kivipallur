@@ -10,7 +10,12 @@ if (keyboard_check_pressed( btnMoveDown ) || keyboard_check_released( btnMoveDow
 
 // Player Actions
 
-
+if (keyboard_check_pressed( btnKick ) && isKicking == false){
+    isWalking = false;
+    isKicking = true;
+    mainSprite = sprKickR;
+    spriteSub = 0;    
+}
 // Move player
 
 if keyboard_check( btnMoveRight ) { x += playerMoveSpeed;}
@@ -25,11 +30,23 @@ if keyboard_check_pressed( btnMoveDown ) && currentLane < 2  {
     }
 
 if (!keyboard_check( btnMoveRight ) && 
-    !keyboard_check( btnMoveLeft ) && 
+    !keyboard_check( btnMoveLeft ) &&
     !keyboard_check( btnMoveUp ) &&
     !keyboard_check( btnMoveDown )) {isWalking = false } else {isWalking = true}
 
-if (isWalking) { spriteSub = animationSpeed * sys.ct} //If walking -> variable that defines to GIF iomage counter aka Subimage
+if (isWalking) { spriteSub = animationSpeed * sys.ct} //If walking -> variable that defines to GIF image counter aka Subimage
+
+if (isKicking) {
+    spriteSub += 1/room_speed*16
+    
+    if spriteSub >= 11 {
+        isKicking = false;
+        isWalking = false;
+        // switch back to default sprite
+        mainSprite = sprRightWalking
+        spriteSub =  0;
+    }
+}
 
 xscale = 1-(abs(800-y)/800);
 yscale = xscale;
@@ -46,7 +63,6 @@ if keyboard_check_pressed( btnSend ) {
     sys.ammoCount += 1;
 }
 
-//if ()
 
 
 //Testarea DEBUG BUILD STUFF
