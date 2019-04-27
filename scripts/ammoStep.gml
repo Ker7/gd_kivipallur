@@ -17,4 +17,4 @@ if (x<640) {
     }
 }
 
-if (!isFlying) { fadeCounter -= 0.01 } 
+if (!isFlying) { fadeCounter -= 0.006 } 

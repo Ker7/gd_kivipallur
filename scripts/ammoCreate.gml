@@ -19,6 +19,6 @@ mask_index = sprite_index;
         
 dist__var = 8;
 for (i = 0; i < 8; i += 1) {
-shadX[i] = -dist__var*1.2+random(dist__var*2.4)
-shadY[i] = -dist__var+random(dist__var*2)
+shadX[i] = -dist__var*1.1+random(dist__var*2.2)
+shadY[i] = -dist__var+random(dist__var*1.8)
 }

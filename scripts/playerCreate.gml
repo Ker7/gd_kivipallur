@@ -23,7 +23,7 @@ animationSpeed = 16    // * [n] - 1 frame per second, 2 - frames per second, flo
 
 //Sprite Part
 mainSprite = sprite_index; 
-mask_index = sprite_index; 
+mask_index = sprPlayerMask; 
 spriteSub = 0;
 xscale = 1;
 yscale = xscale;

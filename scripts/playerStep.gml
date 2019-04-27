@@ -1,4 +1,5 @@
 // Step
+depth = -y
 
 // After keypress reset subimage and mabye change direction of sprite /2 sides
 if (keyboard_check_pressed( btnMoveRight ) || keyboard_check_released( btnMoveRight ))  { spriteSub = 0; mainSprite = sprRightWalking;}
@@ -28,7 +29,6 @@ xscale = 1-(abs(800-y)/800);
 yscale = xscale;
 playerMoveSpeed = 3*xscale;
 
-depth = -y
 
 // Shootingh so far @tomoveee
 if keyboard_check_pressed( btnSend ) { 
@@ -39,6 +39,8 @@ if keyboard_check_pressed( btnSend ) {
     s+=1;
     sys.ammoCount += 1;
 }
+
+//if ()
 
 
 //Testarea DEBUG BUILD STUFF
