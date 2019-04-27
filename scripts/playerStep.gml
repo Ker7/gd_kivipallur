@@ -9,8 +9,8 @@ if (keyboard_check_pressed( btnMoveDown ) || keyboard_check_released( btnMoveDow
 // Move player
 if keyboard_check( btnMoveRight ) { x += playerMoveSpeed;}
 if keyboard_check( btnMoveLeft ) { x -= playerMoveSpeed;}
-if keyboard_check( btnMoveUp ) { y -= playerMoveSpeed;}
-if keyboard_check( btnMoveDown ) && y<600{ y += playerMoveSpeed;}
+if keyboard_check( btnMoveUp ) { yspd -= 1;}
+if keyboard_check( btnMoveDown ) && y<600{ yspd += 1;}
 
 if (!keyboard_check( btnMoveRight ) && 
     !keyboard_check( btnMoveLeft ) && 
@@ -31,4 +31,13 @@ if keyboard_check_pressed( btnSend ) {
     yo[s].speed = 11+random(1);
     s+=1;
     sys.ammoCount += 1;
+}
+
+
+//Testarea DEBUG BUILD STUFF
+if keyboard_check_pressed(ord('S')) {
+    with (instance_create(850, 639-32-64, ammo1)) {
+        path_start(path0, 8 ,path_action_stop, false);
+        path_scale = ((85+random(30))/100);
+    }
 }

@@ -11,5 +11,5 @@ obj_player = instance_create(200,600,player)
 
 
 obj_player.iq = 147;
-obj_player.playerMoveSpeed = 3;
+obj_player.playerMoveSpeed = 4;
 

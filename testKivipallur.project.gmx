@@ -8,25 +8,30 @@
   <sprites name="sprites">
     <sprite>sprites\sprPlayerRW</sprite>
     <sprite>sprites\sprPlayerLW</sprite>
+    <sprite>sprites\sprPlayerMask</sprite>
     <sprite>sprites\sprPlayerHead</sprite>
     <sprite>sprites\sprAmmo1</sprite>
+    <sprite>sprites\sprAmmo2</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
     <background>background\background1</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\path0</path>
+  </paths>
   <scripts name="scripts">
     <script>scripts\sysCreate.gml</script>
     <script>scripts\sysStep.gml</script>
     <script>scripts\sysDraw.gml</script>
     <script>scripts\sysDrawGUI.gml</script>
+    <script>scripts\ammoCreate.gml</script>
     <script>scripts\ammoStep.gml</script>
     <script>scripts\ammoDraw.gml</script>
     <scripts name="player">
-      <script>scripts\playerDraw.gml</script>
-      <script>scripts\playerStep.gml</script>
       <script>scripts\playerCreate.gml</script>
+      <script>scripts\playerStep.gml</script>
+      <script>scripts\playerDraw.gml</script>
     </scripts>
     <scripts name="ammoGenerator">
       <script>scripts\ammoGeneratorCreate.gml</script>
@@ -39,8 +44,10 @@
     <object>objects\sys</object>
     <object>objects\player</object>
     <object>objects\ammo</object>
+    <object>objects\ammo1</object>
     <object>objects\ammoGenerator</object>
   </objects>
+  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>
