@@ -1,10 +1,9 @@
 // Create
-
+score = 0;
 playerMoveSpeed = 3 //Default value, reassigned in sys Creation
 currentLane = 1 //index: [0..2]
 
 y = global.lanes[currentLane]
-
 
 
 // keys

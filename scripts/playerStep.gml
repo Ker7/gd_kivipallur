@@ -55,3 +55,7 @@ if (keyboard_check(ord('D')) || keyboard_check_pressed(ord('S'))) {
         //path_scale = ((85+random(30))/100);
     }
 }
+
+if keyboard_check(ord('M')) {
+    score += 5;
+}

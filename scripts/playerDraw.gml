@@ -9,6 +9,16 @@ draw_healthbar( x-((73)*2.5*xscale),
                 x-((73+health)*2.5*xscale),
                 y-((58)*2.5*xscale),
                 iq,c_white,c_red,c_blue,0,true,true);
+                
+// Score
+draw_text_transformed_colour(
+    20, room_height-50,
+    "Score: $" + string ( score),
+    2,2,0,
+    0,0,200,255,
+    1
+    )
+
          
 // Debug       
 if debug_mode = true {
