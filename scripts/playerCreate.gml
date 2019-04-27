@@ -7,6 +7,11 @@ btnMoveLeft = vk_left;
 btnMoveUp = vk_up;
 btnMoveDown = vk_down;
 
+btnKick = vk_control;
+btnPunch = vk_lalt;
+btnHeadbutt = vk_shift;
+
+
 btnSend = vk_space;
 s=0                     //counter for ammo shots fired //unnecissary
 
@@ -21,3 +26,5 @@ mainSprite = sprite_index;
 spriteSub = 0;
 xscale = 1;
 yscale = xscale;
+
+yspd = 0;

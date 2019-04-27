@@ -4,7 +4,7 @@ AMMO_X = 800;
 AMMO_Y_MIN = 0;
 AMMO_Y_MAX = 500;
 
-show_debug_message("Spawning object");
+show_debug_message("Spawning object: " + string(argument0));
 
 var ammo_instance = instance_create(
     AMMO_X,

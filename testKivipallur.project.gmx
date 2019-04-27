@@ -21,6 +21,7 @@
     <path>paths\path0</path>
   </paths>
   <scripts name="scripts">
+    <script>scripts\ammoCreate.gml</script>
     <scripts name="player">
       <script>scripts\playerCreate.gml</script>
       <script>scripts\playerStep.gml</script>
@@ -51,7 +52,6 @@
     <object>objects\ammo1</object>
     <object>objects\ammoGenerator</object>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>

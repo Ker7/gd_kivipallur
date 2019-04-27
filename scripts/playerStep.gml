@@ -6,11 +6,16 @@ if (keyboard_check_pressed( btnMoveLeft ) || keyboard_check_released( btnMoveLef
 if (keyboard_check_pressed( btnMoveUp ) || keyboard_check_released( btnMoveUp ))     { spriteSub = 0}
 if (keyboard_check_pressed( btnMoveDown ) || keyboard_check_released( btnMoveDown ))   { spriteSub = 0}
 
+
+// Player Actions
+
+
+
 // Move player
 if keyboard_check( btnMoveRight ) { x += playerMoveSpeed;}
 if keyboard_check( btnMoveLeft ) { x -= playerMoveSpeed;}
-if keyboard_check( btnMoveUp ) { yspd -= 1;}
-if keyboard_check( btnMoveDown ) && y<600{ yspd += 1;}
+if keyboard_check( btnMoveUp ) { y -= 1;}
+if keyboard_check( btnMoveDown ) && y<600{ y += 1;}
 
 if (!keyboard_check( btnMoveRight ) && 
     !keyboard_check( btnMoveLeft ) && 

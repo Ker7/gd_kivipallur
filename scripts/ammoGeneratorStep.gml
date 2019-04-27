@@ -5,9 +5,9 @@ if ds_list_empty(event_id_list){
     //How many to schedule?
     difficulty_mod = max(1, (global.c div 1000))
     var ammo_count = irandom_range(1,2) * difficulty_mod
-    show_debug_message("Difficulty="+ string(difficulty_mod) +", Scheduling " + string(ammo_count) + " new events");
+    show_debug_message("Difficulty= "+ string(difficulty_mod) +", Scheduling " + string(ammo_count) + " new events");
     for (var i = 0; i < ammo_count; i++;){
-        script_execute(scheduleOneEvent, ammo);
+        script_execute(scheduleOneEvent, ammo, 100, 200);
     }
 
 }
@@ -17,13 +17,14 @@ if ds_list_empty(event_id_list){
 if (ds_list_find_value(event_id_list, 0) <= global.c){
     show_debug_message("New event");
     
-    script_execute(spawnAmmoInstance, ammo);
+    var rand = random(1);
+    var type;
+    if rand >= 0.66 { type = ammo }
+    else { type = ammo1 };
+    script_execute(spawnAmmoInstance, type);
     //remove from datastructures
     ds_list_delete(event_id_list, 0)
-    ds_map_delete(event_map, global.c)
-    
-    
-    
+    ds_map_delete(event_map, global.c)    
     
     
 }
