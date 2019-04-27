@@ -1,5 +1,5 @@
 
-depth = -laneY[targetLane]
+depth = -global.lanes[targetLane]
 
 if (direction>135) {
     path_speed = path_speed * 1.02
@@ -9,12 +9,10 @@ if (direction>135) {
 
 if (path_position = 1) {isFlying = 0}
 
-if (x<640) {
-    if y>laneY[targetLane] {
+if x<640 &&  y>global.lanes[targetLane] {
         speed = 0;
         gravity = 0;
         isFlying = false;
-    }
 }
 
 if (!isFlying) { fadeCounter -= 0.01 } 

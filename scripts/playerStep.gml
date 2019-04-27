@@ -10,12 +10,18 @@ if (keyboard_check_pressed( btnMoveDown ) || keyboard_check_released( btnMoveDow
 // Player Actions
 
 
-
 // Move player
+
 if keyboard_check( btnMoveRight ) { x += playerMoveSpeed;}
 if keyboard_check( btnMoveLeft ) { x -= playerMoveSpeed;}
-if keyboard_check( btnMoveUp ) { y -= 1;}
-if keyboard_check( btnMoveDown ) && y<600{ y += 1;}
+if keyboard_check_pressed( btnMoveUp) && currentLane > 0 {
+    y -= global.laneYStep
+    currentLane -= 1 
+    }
+if keyboard_check_pressed( btnMoveDown ) && currentLane < 2  { 
+    y += global.laneYStep
+    currentLane +=1
+    }
 
 if (!keyboard_check( btnMoveRight ) && 
     !keyboard_check( btnMoveLeft ) && 
