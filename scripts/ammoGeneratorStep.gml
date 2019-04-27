@@ -9,7 +9,6 @@ if ds_list_empty(event_id_list){
     for (var i = 0; i < ammo_count; i++;){
         script_execute(scheduleOneEvent, ammo, 100, 200);
     }
-
 }
 
 
@@ -20,8 +19,8 @@ if (ds_list_find_value(event_id_list, 0) <= global.c){
     var rand = random(1);
     var type;
     
-    if rand >= 0.66 { type = ammo }
-    else { type = ammo1 };
+    if rand >= 0.66 { type = ammo1 }
+    else { type = ammo };
     script_execute(spawnAmmoInstance, type);
     //remove from datastructures
     ds_list_delete(event_id_list, 0)

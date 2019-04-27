@@ -1,7 +1,12 @@
 // Create
-
+score = 0;
 playerMoveSpeed = 3 //Default value, reassigned in sys Creation
+currentLane = 1 //index: [0..2]
 
+y = global.lanes[currentLane]
+
+
+// keys
 btnMoveRight = vk_right;
 btnMoveLeft = vk_left;
 btnMoveUp = vk_up;
@@ -11,8 +16,8 @@ btnKick = vk_control;
 btnPunch = vk_lalt;
 btnHeadbutt = vk_shift;
 
-
 btnSend = vk_space;
+
 s=0                     //counter for ammo shots fired //unnecissary
 
 sprRightWalking = sprPlayerRW;  //Player skin init

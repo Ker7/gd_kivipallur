@@ -11,12 +11,18 @@ if (keyboard_check_pressed( btnMoveDown ) || keyboard_check_released( btnMoveDow
 // Player Actions
 
 
-
 // Move player
+
 if keyboard_check( btnMoveRight ) { x += playerMoveSpeed;}
 if keyboard_check( btnMoveLeft ) { x -= playerMoveSpeed;}
-if keyboard_check( btnMoveUp ) { y -= 1;}
-if keyboard_check( btnMoveDown ) && y<600{ y += 1;}
+if keyboard_check_pressed( btnMoveUp) && currentLane > 0 {
+    y -= global.laneYStep
+    currentLane -= 1 
+    }
+if keyboard_check_pressed( btnMoveDown ) && currentLane < 2  { 
+    y += global.laneYStep
+    currentLane +=1
+    }
 
 if (!keyboard_check( btnMoveRight ) && 
     !keyboard_check( btnMoveLeft ) && 
@@ -50,4 +56,8 @@ if (keyboard_check(ord('D')) || keyboard_check_pressed(ord('S'))) {
         //path_start(path0, 8 ,path_action_stop, false);
         //path_scale = ((85+random(30))/100);
     }
+}
+
+if keyboard_check(ord('M')) {
+    score += 5;
 }

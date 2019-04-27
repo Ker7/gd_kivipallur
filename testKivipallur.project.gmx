@@ -50,6 +50,7 @@
       <script>scripts\ammoDraw.gml</script>
       <script>scripts\spawnAmmoInstance.gml</script>
     </scripts>
+    <script>scripts\scoreCreate.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\sys</object>
