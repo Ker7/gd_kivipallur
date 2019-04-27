@@ -1,6 +1,6 @@
 // arg0 = type
 
-AMMO_X = 600;
+AMMO_X = 800;
 AMMO_Y_MIN = 0;
 AMMO_Y_MAX = 500;
 

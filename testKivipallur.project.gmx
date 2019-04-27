@@ -17,12 +17,6 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\sysCreate.gml</script>
-    <script>scripts\sysStep.gml</script>
-    <script>scripts\sysDraw.gml</script>
-    <script>scripts\sysDrawGUI.gml</script>
-    <script>scripts\ammoStep.gml</script>
-    <script>scripts\ammoDraw.gml</script>
     <scripts name="player">
       <script>scripts\playerDraw.gml</script>
       <script>scripts\playerStep.gml</script>
@@ -32,7 +26,18 @@
       <script>scripts\ammoGeneratorCreate.gml</script>
       <script>scripts\ammoGeneratorStep.gml</script>
       <script>scripts\getTimestamp.gml</script>
+      <script>scripts\scheduleOneEvent.gml</script>
+    </scripts>
+    <scripts name="sys">
+      <script>scripts\sysStep.gml</script>
+      <script>scripts\sysDraw.gml</script>
+      <script>scripts\sysDrawGUI.gml</script>
+      <script>scripts\sysCreate.gml</script>
+    </scripts>
+    <scripts name="ammo">
+      <script>scripts\ammoDraw.gml</script>
       <script>scripts\spawnAmmoInstance.gml</script>
+      <script>scripts\ammoStep.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
