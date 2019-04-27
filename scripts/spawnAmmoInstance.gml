@@ -13,5 +13,5 @@ var ammo_instance = instance_create(
     );
 ammo_instance.gravity = 0.3;
 ammo_instance.direction = 135-random(40);
-ammo_instance.speed = 8+random(4);
+ammo_instance.speed = 11+random(1);
 return ammo_instance;

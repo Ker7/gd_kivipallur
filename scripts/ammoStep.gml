@@ -1,4 +1,6 @@
 
+depth = -laneY[targetLane]
+
 if (direction>135) {
     path_speed = path_speed * 1.02
     } else { 

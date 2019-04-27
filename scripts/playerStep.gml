@@ -28,6 +28,8 @@ xscale = 1-(abs(800-y)/800);
 yscale = xscale;
 playerMoveSpeed = 3*xscale;
 
+depth = -y
+
 // Shootingh so far @tomoveee
 if keyboard_check_pressed( btnSend ) { 
     yo[s] = instance_create(x+400,y,ammo)
@@ -40,7 +42,7 @@ if keyboard_check_pressed( btnSend ) {
 
 
 //Testarea DEBUG BUILD STUFF
-if keyboard_check(ord('S')) {
+if (keyboard_check(ord('D')) || keyboard_check_pressed(ord('S'))) {
     with (instance_create(850, 639-32-64, ammo)) {
         sys.ammoCount += 1;
         //path_start(path0, 8 ,path_action_stop, false);

@@ -8,7 +8,12 @@
   <sprites name="sprites">
     <sprite>sprites\sprPlayerRW</sprite>
     <sprite>sprites\sprPlayerLW</sprite>
+    <sprite>sprites\sprite8</sprite>
+    <sprite>sprites\sprPlayerLW23</sprite>
+    <sprite>sprites\sprite9</sprite>
     <sprite>sprites\sprPlayerMask</sprite>
+    <sprite>sprites\sprAmmoMask1</sprite>
+    <sprite>sprites\sprAmmoShadow1</sprite>
     <sprite>sprites\sprPlayerHead</sprite>
     <sprite>sprites\sprAmmo1</sprite>
     <sprite>sprites\sprAmmo2</sprite>
