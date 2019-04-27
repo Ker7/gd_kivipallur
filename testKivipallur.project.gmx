@@ -12,11 +12,16 @@
     <sprite>sprites\sprPlayerLHeadHit</sprite>
     <sprite>sprites\sprite11</sprite>
     <sprite>sprites\fkk</sprite>
-    <sprite>sprites\sprPlayerMask</sprite>
+    <sprite>sprites\sprPlayerMask0</sprite>
+    <sprite>sprites\sprPlayerMask1</sprite>
+    <sprite>sprites\sprPlayerMask2</sprite>
     <sprite>sprites\sprAmmoMask1</sprite>
     <sprite>sprites\sprAmmoShadow1</sprite>
     <sprite>sprites\sprPlayerHead</sprite>
     <sprite>sprites\sprAmmo1</sprite>
+    <sprite>sprites\sprAmmoMaskStone0</sprite>
+    <sprite>sprites\sprAmmoMaskStone1</sprite>
+    <sprite>sprites\sprAmmoMaskStone2</sprite>
     <sprite>sprites\sprAmmo2</sprite>
     <sprite>sprites\sprKickR</sprite>
   </sprites>

@@ -32,7 +32,13 @@ animationSpeed = 16    // * [n] - 1 frame per second, 2 - frames per second, flo
 
 //Sprite Part
 mainSprite = sprite_index; 
-mask_index = sprPlayerMask; 
+//mask_index = sprPlayerMask; 
+switch(currentLane) {
+case(0): mask_index = sprPlayerMask0; break;
+case(1): mask_index = sprPlayerMask1; break;
+case(2): mask_index = sprPlayerMask2; break;
+default: break;
+}
 spriteSub = 0;
 xscale = 1;
 yscale = xscale;

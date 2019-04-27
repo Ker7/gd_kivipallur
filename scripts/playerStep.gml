@@ -10,12 +10,29 @@ if (keyboard_check_pressed( btnMoveDown ) || keyboard_check_released( btnMoveDow
 
 // Player Actions
 
+
 if (keyboard_check_pressed( btnKick ) && isKicking == false){
     isWalking = false;
     isKicking = true;
     mainSprite = sprKickR;
     spriteSub = 0;    
 }
+
+with (ammo) {
+    if (isFlying && !hasHit && targetLane == player.currentLane) {
+        if (place_meeting(x-4, y+4, player)) {
+        hasHit = true;
+        //speed = 0;
+        //gravity = 0;
+        
+        direction = 68+random(10);
+        speed = 5+random(1);
+        gravity = 1;
+        }
+    }
+}
+
+
 // Move player
 
 if keyboard_check( btnMoveRight ) { x += playerMoveSpeed;}
@@ -52,7 +69,6 @@ xscale = 1-(abs(800-y)/800);
 yscale = xscale;
 playerMoveSpeed = 3*xscale;
 
-
 // Shootingh so far @tomoveee
 if keyboard_check_pressed( btnSend ) { 
     yo[s] = instance_create(x+400,y,ammo)
@@ -64,6 +80,13 @@ if keyboard_check_pressed( btnSend ) {
 }
 
 
+switch(currentLane) {
+case(0): mask_index = sprPlayerMask0; break;
+case(1): mask_index = sprPlayerMask1; break;
+case(2): mask_index = sprPlayerMask2; break;
+default: break;
+}
+
 
 //Testarea DEBUG BUILD STUFF
 if (keyboard_check(ord('D')) || keyboard_check_pressed(ord('S'))) {
@@ -71,6 +94,21 @@ if (keyboard_check(ord('D')) || keyboard_check_pressed(ord('S'))) {
         sys.ammoCount += 1;
         //path_start(path0, 8 ,path_action_stop, false);
         //path_scale = ((85+random(30))/100);
+    }
+}
+if (keyboard_check(vk_numpad3)) {
+    with (instance_create(850, 639-32-64, ammo)) {
+    targetLane = 2;        sys.ammoCount += 1;
+    }
+}
+if (keyboard_check(vk_numpad6)) {
+    with ( instance_create(850, 639-32-64, ammo)) {
+    targetLane = 1;        sys.ammoCount += 1;
+    }
+}
+if (keyboard_check(vk_numpad9)) {
+    with instance_create(850, 639-32-64, ammo){
+    targetLane = 0;       sys.ammoCount += 1;
     }
 }
 
