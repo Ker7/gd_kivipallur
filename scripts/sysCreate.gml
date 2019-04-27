@@ -3,7 +3,11 @@ room_speed = 60     // 60 FPS
 c = 0               // Global count clock
 ct = 0              // Global time clock
 
-// World creation
-obj_player = instance_create(200,200,player)
+// Game Stats
+ammoCount = 0       // Shots fired
 
-obj_player.playerMoveSpeed = 4;
+// World creation
+obj_player = instance_create(200,600,player)
+
+obj_player.iq = 147;
+obj_player.playerMoveSpeed = 3;
