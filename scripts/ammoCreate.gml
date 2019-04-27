@@ -8,11 +8,20 @@ gravity = 0.24;
 direction = 112-random(10);
 speed = 14+random(1);
         
-targetLane = irandom(2);
+targetLane = 2;//irandom(2);
+//targetLane = irandom(2);
+//stoneSize = 2; //if stonesize
 stoneSize = irandom(2); //if stonesize
-mask_index = sprite_index;
+switch(stoneSize) {
+case(0): mask_index = sprAmmoMaskStone0; break;
+case(1): mask_index = sprAmmoMaskStone1; break;
+case(2): mask_index = sprAmmoMaskStone2; break;
+default: break;
+}
 
-        
+cnt = 0 //Second counter for ammo age, if age +1s : valid for earth collision check
+
+// Shadow Making
 dist__var = 8;
 for (i = 0; i < 8; i += 1) {
 shadX[i] = -dist__var*1.1+random(dist__var*2.2)
