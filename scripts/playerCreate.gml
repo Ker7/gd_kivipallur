@@ -1,5 +1,6 @@
 // Create
 score = 0;
+health = 90;
 playerMoveSpeed = 3 //Default value, reassigned in sys Creation
 currentLane = 1 //index: [0..2]
 

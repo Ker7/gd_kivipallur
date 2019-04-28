@@ -3,8 +3,8 @@
 // Schedule new events if there are none!
 if ds_list_empty(event_id_list){
     //How many to schedule?
-    difficulty_mod = max(1, (global.c div 1000))
-    var ammo_count = irandom_range(1,2) * difficulty_mod
+    sys.difficulty = max(1, (global.c div 1000))
+    var ammo_count = irandom_range(1,2) * sys.difficulty
     //show_debug_message("Difficulty= "+ string(difficulty_mod) +", Scheduling " + string(ammo_count) + " new events");
     for (var i = 0; i < ammo_count; i++;){
         script_execute(scheduleOneEvent, ammo, 100, 200);

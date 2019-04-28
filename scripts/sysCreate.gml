@@ -12,6 +12,8 @@ global.lanes[0] = 476
 global.lanes[1] = global.lanes[0] + global.laneYStep
 global.lanes[2] = global.lanes[1] + global.laneYStep
 
+sys.difficulty = 1;
+
 // World creation
 obj_player = instance_create(200,600,player)
 instance_create(200,600,ammoGenerator)

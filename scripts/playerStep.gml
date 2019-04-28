@@ -68,16 +68,23 @@ with (ammo) {
     if (isFlying && !hasHit && targetLane == player.currentLane) {
         if (place_meeting(x-4, y+4, player)) {
         hasHit = true;
-                
+             
+        // Blood splatter   
         with instance_create(other.x, y, obj_Blood){
-            
             depth = -1000;
             direction = 45+random(90);
             speed = 5+random(1);
             gravity = 1;
         }
+        
+        // Player IQ decrease
+        health -= 5;//TODO get from rock type
+        
+        
         //speed = 0;
         //gravity = 0;
+        
+        // Ammo movement
         
         direction = 68+random(10);
         speed = 5+random(1);
