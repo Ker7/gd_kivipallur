@@ -28,6 +28,7 @@
       <sprite>sprites\spr_newgame</sprite>
       <sprite>sprites\spr_exit</sprite>
     </sprites>
+    <sprite>sprites\sprCrowd</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\backPeople</background>
@@ -48,6 +49,7 @@
       <script>scripts\bloodSpawn.gml</script>
       <script>scripts\playerCollision.gml</script>
       <script>scripts\resetToPlayerIdle.gml</script>
+      <script>scripts\actionPointStep.gml</script>
     </scripts>
     <scripts name="ammoGenerator">
       <script>scripts\ammoGeneratorCreate.gml</script>
@@ -77,6 +79,12 @@
       <script>scripts\menuStep.gml</script>
       <script>scripts\menuDraw.gml</script>
     </scripts>
+    <scripts name="crowd">
+      <script>scripts\crowdStep.gml</script>
+      <script>scripts\crowdDraw.gml</script>
+      <script>scripts\crowdCreate.gml</script>
+    </scripts>
+    <script>scripts\ammoPlayerActionCheck.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\sys</object>
@@ -92,6 +100,8 @@
       <object>objects\btn_newgame</object>
       <object>objects\btn_quit</object>
     </objects>
+    <object>objects\obj_crowd</object>
+    <object>objects\playerActionPoint</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\mainmenu</room>

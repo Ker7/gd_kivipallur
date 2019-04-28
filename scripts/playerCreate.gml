@@ -1,4 +1,6 @@
 // Create
+
+actionPoint = instance_create(x,y, playerActionPoint)
 score = 0;
 health = 146;
 playerMoveSpeed = 3 //Default value, reassigned in sys Creation
