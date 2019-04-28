@@ -21,6 +21,7 @@
     <sprite>sprites\sprAmmoMaskStone2</sprite>
     <sprite>sprites\sprAmmo2</sprite>
     <sprite>sprites\sprKickR</sprite>
+    <sprite>sprites\sprBlood</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -61,6 +62,7 @@
     <object>objects\ammo</object>
     <object>objects\ammo1</object>
     <object>objects\ammoGenerator</object>
+    <object>objects\obj_Blood</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

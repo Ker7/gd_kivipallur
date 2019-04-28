@@ -7,7 +7,6 @@ if (keyboard_check_pressed( btnMoveLeft ) || keyboard_check_released( btnMoveLef
 if (keyboard_check_pressed( btnMoveUp ) || keyboard_check_released( btnMoveUp ))     { spriteSub = 0}
 if (keyboard_check_pressed( btnMoveDown ) || keyboard_check_released( btnMoveDown ))   { spriteSub = 0}
 
-
 // Player Actions
 if (keyboard_check_pressed( btnKick ) && isKicking == false){
     isWalking = false;
@@ -15,7 +14,6 @@ if (keyboard_check_pressed( btnKick ) && isKicking == false){
     mainSprite = sprKickR;
     spriteSub = 0;    
 }
-
 
 // Move player
 
@@ -38,14 +36,27 @@ if (!keyboard_check( btnMoveRight ) &&
 if (isWalking) { spriteSub = animationSpeed * sys.ct} //If walking -> variable that defines to GIF image counter aka Subimage
 
 if (isKicking) {
+    // Sprite
     spriteSub += 1/room_speed*16
     
-    if spriteSub >= 11 {
+    if spriteSub >= image_number {
         isKicking = false;
         isWalking = false;
-        // switch back to default sprite
-        mainSprite = sprRightWalking
+        mainSprite = sprRightWalking // switch back to default sprite
         spriteSub =  0;
+    }
+    
+    
+    // Kick collision
+    with instance_nearest(x, y-50, ammo) {
+    
+        dist = distance_to_object( other ); //how far is the nearest ammo?
+        if dist <= 80 && !hasHit {
+            if other.spriteSub > 2 && other.spriteSub < 7 // sync hit with certain subframes
+            speed = 20;
+            direction = 45 //TODO add some random
+            
+        }
     }
 }
 
@@ -53,31 +64,24 @@ xscale = 1-(abs(800-y)/800);
 yscale = xscale;
 playerMoveSpeed = 3*xscale;
 
-// Shootingh so far @tomoveee
-if keyboard_check_pressed( btnSend ) { 
-    yo[s] = instance_create(x+400,y,ammo)
-    yo[s].gravity = 0.3;
-    yo[s].direction = 135-random(15);
-    yo[s].speed = 11+random(1);
-    s+=1;
-    sys.ammoCount += 1;
-}
-
-
-
 with (ammo) {
     if (isFlying && !hasHit && targetLane == player.currentLane) {
         if (place_meeting(x-4, y+4, player)) {
         hasHit = true;
+                
+        with instance_create(other.x, y, obj_Blood){
+            
+            depth = -1000;
+            direction = 45+random(90);
+            speed = 5+random(1);
+            gravity = 1;
+        }
         //speed = 0;
         //gravity = 0;
         
         direction = 68+random(10);
         speed = 5+random(1);
         gravity = 1;
-        
-        rotspeed = random_range(-4, 4);
-
         }
     }
 }
@@ -91,6 +95,17 @@ default: break;
 
 //Testarea DEBUG BUILD STUFF
 if (debug_mode) {
+
+// Shootingh so far @tomoveee
+if keyboard_check_pressed( btnSend ) { 
+    yo[s] = instance_create(x+400,y,ammo)
+    yo[s].gravity = 0.3;
+    yo[s].direction = 135-random(15);
+    yo[s].speed = 11+random(1);
+    s+=1;
+    sys.ammoCount += 1;
+}
+
     if (keyboard_check(ord('D')) || keyboard_check_pressed(ord('S'))) {
         with (instance_create(850, 639-32-64, ammo)) {
             sys.ammoCount += 1;
