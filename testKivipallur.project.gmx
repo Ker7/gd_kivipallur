@@ -30,6 +30,8 @@
       <sprite>sprites\spr_exit</sprite>
     </sprites>
     <sprite>sprites\sprCrowd</sprite>
+    <sprite>sprites\sprJurto</sprite>
+    <sprite>sprites\sprJurtoTalking</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\backPeople</background>
@@ -87,6 +89,10 @@
       <script>scripts\crowdCreate.gml</script>
     </scripts>
     <script>scripts\ammoPlayerActionCheck.gml</script>
+    <scripts name="quoter">
+      <script>scripts\quoterCreate.gml</script>
+      <script>scripts\quoterStep.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\sys</object>
@@ -104,7 +110,9 @@
     </objects>
     <object>objects\obj_crowd</object>
     <object>objects\playerActionPoint</object>
+    <object>objects\jurtoQuoter</object>
   </objects>
+  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\mainmenu</room>
     <room>rooms\room0</room>
