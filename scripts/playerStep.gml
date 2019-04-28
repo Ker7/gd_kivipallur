@@ -11,7 +11,14 @@ if (keyboard_check_pressed( btnMoveDown ) || keyboard_check_released( btnMoveDow
 if (keyboard_check_pressed( btnKick ) && isKicking == false){
     isWalking = false;
     isKicking = true;
-    mainSprite = sprKickR;
+    mainSprite = sprKicking;
+    spriteSub = 0;    
+}
+
+if (keyboard_check_pressed( btnHeadbutt ) && isKicking == false && isHeadbutting == false){
+    isWalking = false;
+    isHeadbutting = true;
+    mainSprite = sprHeadbutting;
     spriteSub = 0;    
 }
 
@@ -35,6 +42,8 @@ if (!keyboard_check( btnMoveRight ) &&
 
 if (isWalking) { spriteSub = animationSpeed * sys.ct} //If walking -> variable that defines to GIF image counter aka Subimage
 
+
+// ----- K I C K -------------
 if (isKicking) {
     // Sprite
     spriteSub += 1/room_speed*16
@@ -54,8 +63,32 @@ if (isKicking) {
         if dist <= 80 && !hasHit {
             if other.spriteSub > 2 && other.spriteSub < 7 // sync hit with certain subframes
             speed = 20;
-            direction = 45 //TODO add some random
-            
+            direction = 45 //TODO add some random 
+        }
+    }
+}
+
+// ----- HEADBUTT -----
+if (isHeadbutting) {
+    show_debug_message("HEADBUTT")
+    // Sprite
+    spriteSub += 1/room_speed*16
+    
+    if spriteSub >= image_number {
+        isHeadbutting = false;
+        isWalking = false;
+        mainSprite = sprRightWalking // switch back to default sprite
+        spriteSub =  0;
+    }
+    
+    // collision
+    with instance_nearest(x, y-50, ammo) {
+    
+        dist = distance_to_object( other ); //how far is the nearest ammo?
+        if dist <= 80 && !hasHit {
+            if other.spriteSub > 2 && other.spriteSub < 7 // sync hit with certain subframes
+            speed = 20;
+            direction = 45 //TODO add some random 
         }
     }
 }
