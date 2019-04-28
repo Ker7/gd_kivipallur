@@ -4,7 +4,8 @@ c: "+ string(global.c) +"
 ct: "+ string(ct) +"
 FPS: "+ string(fps) +"
 FPSreal: "+ string(fps_real) +"
-instances: "+ string(instance_count) +"");
+instances: "+ string(instance_count) +"
+health: "+ string(health) +"");
 
 // Healthbar
 draw_healthbar( 300, room_height-50, room_width-300, room_height-15, 

@@ -63,6 +63,7 @@ if (isKicking) {
             if other.spriteSub > 2 && other.spriteSub < 7 // sync hit with certain subframes
             speed = 10;
             direction = 75+random(15) //TODO add some random 
+            score += 5;
         }
     }
 }
@@ -81,12 +82,13 @@ if (isHeadbutting) {
     }
     
     // collision
-    with instance_nearest(x, y-50, ammo) {
+    with instance_nearest(x, y, ammo) {
         dist = distance_to_object( other ); //how far is the nearest ammo?
         if dist <= 80 && !hasHit && targetLane == player.currentLane {
-            if other.spriteSub > 2 && other.spriteSub < 7 // sync hit with certain subframes
-            speed = 20;
+            if other.spriteSub > 1 && other.spriteSub < 6 // sync hit with certain subframes
+            speed = 15;
             direction = 45 //TODO add some random 
+            score += 10;
         }
     }
 }
@@ -135,7 +137,7 @@ default: break;
 
 
 //Testarea DEBUG BUILD STUFF
-if (debug_mode) {
+if (true){ //(debug_mode) {
 
 // Shootingh so far @tomoveee
 if keyboard_check_pressed( btnSend ) { 
