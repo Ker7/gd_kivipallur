@@ -1,2 +1,9 @@
 // arg0 - dist
-return (distance_to_object( other ) <= argument0 && !hasHit && !hasLanded && !hitByPlayer && targetLane == player.currentLane)
+return (
+    distance_to_object( player.actionPoint ) <= argument0 &&
+    x >= player.x &&
+     !hasHit &&
+     !hasLanded &&
+     !hitByPlayer &&
+     targetLane == player.currentLane
+     )

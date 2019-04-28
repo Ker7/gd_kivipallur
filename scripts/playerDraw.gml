@@ -13,15 +13,14 @@ if debug_mode = true {
     // player kicking debug circle
     with playerActionPoint {
     // todo depth scale
-        draw_ellipse_colour(x-50,y-100,x+50,y+50,c_green,c_green, true)
+        draw_circle_colour(x,y, player.ACTION_RANGE, c_green, c_green, true)
 
 
     }
-    
-    with instance_nearest(x, y-80, ammo) {
-        
-        if ammoPlayerActionCheck(80) {
-            draw_circle(x, y-80, 80, true)
+
+    with ammo {
+        if ammoPlayerActionCheck(50) {
+            draw_circle(x, y, player.ACTION_RANGE, true)
         }        
     } 
 }

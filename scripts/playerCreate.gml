@@ -1,8 +1,9 @@
 // Create
 
 actionPoint = instance_create(x,y, playerActionPoint)
+ACTION_RANGE = 50
 score = 0;
-health = 146;
+health = 100;
 playerMoveSpeed = 3 //Default value, reassigned in sys Creation
 currentLane = 1 //index: [0..2]
 
