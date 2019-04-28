@@ -3,10 +3,13 @@
 isFlying = true;
 fadeCounter = 2;    //Alpha 1 can be seen, will start to fade after landed
 hasHit = false;
+hasLanded = false;
 
 gravity = 0.24;
 direction = 112-random(10);
 speed = 14+random(1);
+rot = 0;
+rotspeed = random_range(-4, 4);
         
 //targetLane = 2;//irandom(2);
 targetLane = irandom(2);
@@ -27,3 +30,9 @@ for (i = 0; i < 8; i += 1) {
 shadX[i] = -dist__var*1.1+random(dist__var*2.2)
 shadY[i] = -dist__var+random(dist__var*1.8)
 }
+
+//debugging
+ddleft = 0
+ddtop = 16
+ddx = -33
+ddy = 16

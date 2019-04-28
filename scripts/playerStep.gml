@@ -2,34 +2,18 @@
 depth = -y
 
 // After keypress reset subimage and mabye change direction of sprite /2 sides
-if (keyboard_check_pressed( btnMoveRight ) || keyboard_check_released( btnMoveRight ))  { spriteSub = 0; mainSprite = sprRightWalking;}
-if (keyboard_check_pressed( btnMoveLeft ) || keyboard_check_released( btnMoveLeft ))   { spriteSub = 0; mainSprite = sprLeftWalking;}
+if (keyboard_check_pressed( btnMoveRight ) || keyboard_check_released( btnMoveRight ))  { spriteSub = 0;}
+if (keyboard_check_pressed( btnMoveLeft ) || keyboard_check_released( btnMoveLeft ))   { spriteSub = 0;}
 if (keyboard_check_pressed( btnMoveUp ) || keyboard_check_released( btnMoveUp ))     { spriteSub = 0}
 if (keyboard_check_pressed( btnMoveDown ) || keyboard_check_released( btnMoveDown ))   { spriteSub = 0}
 
 
 // Player Actions
-
-
 if (keyboard_check_pressed( btnKick ) && isKicking == false){
     isWalking = false;
     isKicking = true;
     mainSprite = sprKickR;
     spriteSub = 0;    
-}
-
-with (ammo) {
-    if (isFlying && !hasHit && targetLane == player.currentLane) {
-        if (place_meeting(x-4, y+4, player)) {
-        hasHit = true;
-        //speed = 0;
-        //gravity = 0;
-        
-        direction = 68+random(10);
-        speed = 5+random(1);
-        gravity = 1;
-        }
-    }
 }
 
 
@@ -80,6 +64,23 @@ if keyboard_check_pressed( btnSend ) {
 }
 
 
+
+with (ammo) {
+    if (isFlying && !hasHit && targetLane == player.currentLane) {
+        if (place_meeting(x-4, y+4, player)) {
+        hasHit = true;
+        //speed = 0;
+        //gravity = 0;
+        
+        direction = 68+random(10);
+        speed = 5+random(1);
+        gravity = 1;
+        
+        rotspeed = random_range(-4, 4);
+
+        }
+    }
+}
 switch(currentLane) {
 case(0): mask_index = sprPlayerMask0; break;
 case(1): mask_index = sprPlayerMask1; break;
@@ -89,29 +90,31 @@ default: break;
 
 
 //Testarea DEBUG BUILD STUFF
-if (keyboard_check(ord('D')) || keyboard_check_pressed(ord('S'))) {
-    with (instance_create(850, 639-32-64, ammo)) {
-        sys.ammoCount += 1;
-        //path_start(path0, 8 ,path_action_stop, false);
-        //path_scale = ((85+random(30))/100);
+if (debug_mode) {
+    if (keyboard_check(ord('D')) || keyboard_check_pressed(ord('S'))) {
+        with (instance_create(850, 639-32-64, ammo)) {
+            sys.ammoCount += 1;
+            //path_start(path0, 8 ,path_action_stop, false);
+            //path_scale = ((85+random(30))/100);
+        }
     }
-}
-if (keyboard_check(vk_numpad3)) {
-    with (instance_create(850, 639-32-64, ammo)) {
-    targetLane = 2;        sys.ammoCount += 1;
+    if (keyboard_check(vk_numpad3)) {
+        with (instance_create(850, 639-32-64, ammo)) {
+        targetLane = 2;        sys.ammoCount += 1;
+        }
     }
-}
-if (keyboard_check(vk_numpad6)) {
-    with ( instance_create(850, 639-32-64, ammo)) {
-    targetLane = 1;        sys.ammoCount += 1;
+    if (keyboard_check(vk_numpad6)) {
+        with ( instance_create(850, 639-32-64, ammo)) {
+        targetLane = 1;        sys.ammoCount += 1;
+        }
     }
-}
-if (keyboard_check(vk_numpad9)) {
-    with instance_create(850, 639-32-64, ammo){
-    targetLane = 0;       sys.ammoCount += 1;
+    if (keyboard_check(vk_numpad9)) {
+        with instance_create(850, 639-32-64, ammo){
+        targetLane = 0;       sys.ammoCount += 1;
+        }
     }
-}
-
-if keyboard_check(ord('M')) {
-    score += 5;
+    
+    if keyboard_check(ord('M')) {
+        score += 5;
+    }
 }

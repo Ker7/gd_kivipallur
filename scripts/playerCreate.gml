@@ -21,7 +21,7 @@ btnSend = vk_space;
 s=0                     //counter for ammo shots fired //unnecissary
 
 sprRightWalking = sprPlayerRW;  //Player skin init
-sprLeftWalking = sprPlayerLW;
+//sprLeftWalking = sprPlayerLW;
 
 sprRightKicking = sprKickR;
 
