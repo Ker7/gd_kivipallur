@@ -1,8 +1,9 @@
 // Draw 
-draw_sprite_ext(mainSprite,spriteSub,x,y,xscale,yscale,0,c_white,1);
+rot = 0
+if (ticksKnockedOut > 0) { rot = 110} 
+draw_sprite_ext(mainSprite,spriteSub,x,y,xscale,yscale,rot,c_white,1);
 
 //draw_text(x,y,string(x-xprevious));
-
 
 // Debug       
 if debug_mode = true {
@@ -12,14 +13,12 @@ if debug_mode = true {
     
     // player kicking debug circle
     with playerActionPoint {
-    // todo depth scale
+        // todo depth scale
         draw_circle_colour(x,y, player.ACTION_RANGE, c_green, c_green, true)
-
-
     }
 
     with ammo {
-        if ammoPlayerActionCheck(50) {
+        if ammoPlayerActionCheck(player.ACTION_RANGE) {
             draw_circle(x, y, player.ACTION_RANGE, true)
         }        
     } 

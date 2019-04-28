@@ -1,5 +1,5 @@
 if (ticksToCheer > 0 ){
-    image_speed = 0.2
+    image_speed = 0.1
     ticksToCheer -= 1
     
 } else {

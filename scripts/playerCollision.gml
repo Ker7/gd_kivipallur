@@ -7,6 +7,11 @@ with (ammo) {
         // Blood splatter   
         bloodSpawn(8) // 8 splatters
         
+        // knockout
+        if stoneSize > 0 {
+            playerKnockout()
+        }
+        
         // Player IQ decrease
         health -= 5;//TODO get from rock type
                

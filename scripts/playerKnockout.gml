@@ -1,0 +1,1 @@
+player.ticksKnockedOut = 30

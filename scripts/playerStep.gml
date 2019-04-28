@@ -1,6 +1,9 @@
 // Step
 depth = -y
-
+if ticksKnockedOut > 0 {
+    ticksKnockedOut-=1;
+    return;
+}
 // After keypress reset subimage and mabye change direction of sprite /2 sides
 if (keyboard_check_pressed( btnMoveRight ) || keyboard_check_released( btnMoveRight ))  { spriteSub = 0;}
 if (keyboard_check_pressed( btnMoveLeft ) || keyboard_check_released( btnMoveLeft ))   { spriteSub = 0;}

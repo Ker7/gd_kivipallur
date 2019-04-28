@@ -51,6 +51,7 @@
       <script>scripts\playerCollision.gml</script>
       <script>scripts\resetToPlayerIdle.gml</script>
       <script>scripts\actionPointStep.gml</script>
+      <script>scripts\playerKnockout.gml</script>
     </scripts>
     <scripts name="ammoGenerator">
       <script>scripts\ammoGeneratorCreate.gml</script>

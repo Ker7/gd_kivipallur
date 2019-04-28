@@ -17,7 +17,7 @@ sys.difficulty = 0;
 // World creation
 obj_player = instance_create(200,600,player)
 
-objCrowd = instance_create(0,64,obj_crowd)
+objCrowd = instance_create(0,0,obj_crowd)
 
 instance_create(0,0,ammoGenerator)
 //instance_create(0,0, eventListener) // can be used to generate UI messages when difficulty changes etc
