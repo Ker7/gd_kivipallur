@@ -12,11 +12,13 @@ global.lanes[2] = 604;                                      // 476
 global.lanes[1] = global.lanes[2] - global.laneYStep        // 540
 global.lanes[0] = global.lanes[1] - global.laneYStep        // 604
 
-sys.difficulty = 1;
+sys.difficulty = 0;
 
 // World creation
 obj_player = instance_create(200,600,player)
-instance_create(200,600,ammoGenerator)
+
+instance_create(0,0,ammoGenerator)
+instance_create(0,0, eventListener)
 
 obj_player.iq = 147;
 obj_player.playerMoveSpeed = 4;

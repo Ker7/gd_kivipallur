@@ -56,6 +56,11 @@
       <script>scripts\ammoDraw.gml</script>
       <script>scripts\spawnAmmoInstance.gml</script>
     </scripts>
+    <scripts name="eventListener">
+      <script>scripts\eventListenerCreate.gml</script>
+      <script>scripts\eventListenerStep.gml</script>
+      <script>scripts\eventListenerDraw.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\sys</object>
@@ -64,6 +69,7 @@
     <object>objects\ammo1</object>
     <object>objects\ammoGenerator</object>
     <object>objects\obj_Blood</object>
+    <object>objects\eventListener</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
