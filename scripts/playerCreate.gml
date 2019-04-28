@@ -1,7 +1,7 @@
 // Create
 
 actionPoint = instance_create(x,y, playerActionPoint)
-ACTION_RANGE = 50
+ACTION_RANGE = 100
 score = 0;
 health = 100;
 playerMoveSpeed = 3 //Default value, reassigned in sys Creation
@@ -24,11 +24,11 @@ btnSend = vk_space;
 
 s=0                     //counter for ammo shots fired //unnecissary
 
-sprRightWalking = sprPlayerRW;  //Player skin init
-//sprLeftWalking = sprPlayerLW;
+sprRightWalking = sprPlayerWalk1;  //Player skin init
 
-sprKicking = sprKickR;
-sprHeadbutting = sprPlayerRHeadHit;
+sprIdling = sprPlayerIdle1;
+sprHeadbutting = sprPlayerHb1;
+sprKicking = sprPlayerKick1;
 
 isKicking = false;
 isHeadbutting = false;
