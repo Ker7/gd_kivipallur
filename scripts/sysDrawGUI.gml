@@ -7,14 +7,12 @@ FPSreal: "+ string(fps_real) +"
 instances: "+ string(instance_count) +"");
 
 // Healthbar
-draw_healthbar( 
-    300, room_height-40, room_width-300, room_height-20, 
-    health,
-    c_white,c_red,c_red,180,true,true);
+draw_healthbar( 300, room_height-50, room_width-300, room_height-15, 
+    health,c_white,c_red,c_red,180,true,true);
 
 // Score
 draw_text_transformed_colour(
-    50, room_height-45,
+    20, room_height-50,
     "Score: $" + string ( score),
     2,2,0,
     0,0,200,255,
@@ -23,7 +21,7 @@ draw_text_transformed_colour(
     
 // Difficulty
 draw_text_transformed_colour(
-    room_width-200, room_height-45,
+    room_width-200, room_height-50,
     "Stage: " + string ( sys.difficulty),
     2,2,0,
     0,0,255,200,

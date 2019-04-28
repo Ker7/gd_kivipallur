@@ -1,14 +1,17 @@
 // event scheduled for this step?
 
-// Schedule new events if there are none!
+// Schedule new events (new ave) if there are none!
 if ds_list_empty(event_id_list){
     //How many to schedule?
-    sys.difficulty = max(1, (global.c div 1000))
-    var ammo_count = irandom_range(1,2) * sys.difficulty
+    sys.difficulty += 1
+    
+    var ammo_count = sys.difficulty
     //show_debug_message("Difficulty= "+ string(difficulty_mod) +", Scheduling " + string(ammo_count) + " new events");
     for (var i = 0; i < ammo_count; i++;){
-        script_execute(scheduleOneEvent, ammo, 100, 200);
+        script_execute(scheduleOneEvent, ammo, INTER_WAVE_PAUSE, INTER_WAVE_PAUSE + (WAVE_DURATION * sys.difficulty));
     }
+    
+
 }
 
 
