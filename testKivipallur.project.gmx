@@ -24,12 +24,17 @@
     <sprite>sprites\sprKickR</sprite>
     <sprite>sprites\sprBlood</sprite>
     <sprite>sprites\sprImbi</sprite>
+    <sprites name="menu">
+      <sprite>sprites\spr_newgame</sprite>
+      <sprite>sprites\spr_exit</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\backPeople</background>
     <background>background\backGrass</background>
     <background>background\back_fieldCrop</background>
     <background>background\background8</background>
+    <background>background\background4</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path0</path>
@@ -67,6 +72,11 @@
       <script>scripts\eventListenerStep.gml</script>
       <script>scripts\eventListenerDraw.gml</script>
     </scripts>
+    <scripts name="menu">
+      <script>scripts\menuCreate.gml</script>
+      <script>scripts\menuStep.gml</script>
+      <script>scripts\menuDraw.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\sys</object>
@@ -77,8 +87,14 @@
     <object>objects\obj_Blood</object>
     <object>objects\eventListener</object>
     <object>objects\obj_Imbi</object>
+    <object>objects\obj_menu</object>
+    <objects name="menubuttons">
+      <object>objects\btn_newgame</object>
+      <object>objects\btn_quit</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\mainmenu</room>
     <room>rooms\room0</room>
   </rooms>
   <help>
