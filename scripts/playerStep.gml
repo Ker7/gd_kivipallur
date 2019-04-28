@@ -82,7 +82,6 @@ if (isHeadbutting) {
     
     // collision
     with instance_nearest(x, y-50, ammo) {
-    
         dist = distance_to_object( other ); //how far is the nearest ammo?
         if dist <= 80 && !hasHit && targetLane == player.currentLane {
             if other.spriteSub > 2 && other.spriteSub < 7 // sync hit with certain subframes
