@@ -1,7 +1,7 @@
 // Draw 
 draw_sprite_ext(mainSprite,spriteSub,x,y,xscale,yscale,0,c_white,1);
 
-draw_text(x,y,string(x-xprevious));
+//draw_text(x,y,string(x-xprevious));
 
 
 // Debug       

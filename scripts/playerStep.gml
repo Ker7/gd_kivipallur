@@ -100,12 +100,15 @@ with (ammo) {
         if (place_meeting(x-4, y+4, player)) {
         hasHit = true;
              
+        var ammoDir = direction;
         // Blood splatter   
-        with instance_create(other.x, y, obj_Blood){
-            depth = -1000;
-            direction = 45+random(90);
-            speed = 5+random(1);
-            gravity = 1;
+        repeat (8) {
+            with instance_create(other.x, y, obj_Blood){
+                depth = -1000;
+                direction = 75+random(30);
+                speed = 4+random(1);
+                gravity = 0.5;
+            }
         }
         
         // Player IQ decrease

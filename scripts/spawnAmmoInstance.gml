@@ -1,6 +1,6 @@
 // arg0 = type
 
-AMMO_X = 800;
+AMMO_X = 850;
 AMMO_Y_MIN = 0;
 AMMO_Y_MAX = 500;
 
@@ -11,7 +11,11 @@ var ammo_instance = instance_create(
     global.lanes[1], // middle lane
     argument0
     );
-ammo_instance.gravity = 0.3;
-ammo_instance.direction = 135-random(40);
-ammo_instance.speed = 11+random(1);
+//ammo_instance.gravity = 0.3;
+//ammo_instance.direction = 135-random(40);
+//ammo_instance.speed = 11+random(1);
+// New down
+ammo_instance.gravity = 0.24;
+ammo_instance.direction = 112-random(10);
+ammo_instance.speed = 14+random(1);
 return ammo_instance;

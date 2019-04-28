@@ -23,6 +23,7 @@
     <sprite>sprites\sprAmmo2</sprite>
     <sprite>sprites\sprKickR</sprite>
     <sprite>sprites\sprBlood</sprite>
+    <sprite>sprites\sprImbi</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\backPeople</background>
@@ -71,6 +72,7 @@
     <object>objects\ammoGenerator</object>
     <object>objects\obj_Blood</object>
     <object>objects\eventListener</object>
+    <object>objects\obj_Imbi</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
