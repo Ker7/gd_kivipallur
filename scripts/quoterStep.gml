@@ -7,7 +7,7 @@ if (quoteScheduled){
         stepsTilNextQuote -= 1
     }
 }
-show_debug_message(quoteCooldown)
+
 if (visible){
     if quoteCooldown < 0 {
         visible = false
