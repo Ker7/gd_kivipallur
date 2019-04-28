@@ -57,9 +57,7 @@ if (isKicking) {
     
     
     // Kick collision
-
     with instance_nearest(x, y-50, ammo) {
-    
         dist = distance_to_object( other ); //how far is the nearest ammo?
         if dist <= 80 && !hasHit && targetLane == player.currentLane {
             if other.spriteSub > 2 && other.spriteSub < 7 // sync hit with certain subframes
@@ -86,7 +84,7 @@ if (isHeadbutting) {
     with instance_nearest(x, y-50, ammo) {
     
         dist = distance_to_object( other ); //how far is the nearest ammo?
-        if dist <= 80 && !hasHit {
+        if dist <= 80 && !hasHit && targetLane == player.currentLane {
             if other.spriteSub > 2 && other.spriteSub < 7 // sync hit with certain subframes
             speed = 20;
             direction = 45 //TODO add some random 
