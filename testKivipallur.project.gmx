@@ -29,6 +29,8 @@
       <sprite>sprites\spr_newgame</sprite>
       <sprite>sprites\spr_exit</sprite>
     </sprites>
+    <sprite>sprites\sprPileOfThrow</sprite>
+    <sprite>sprites\sprImbiThrow</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\backPeople</background>
@@ -87,6 +89,7 @@
     <object>objects\ammoGenerator</object>
     <object>objects\obj_Blood</object>
     <object>objects\eventListener</object>
+    <object>objects\obj_Pile</object>
     <object>objects\obj_Imbi</object>
     <object>objects\obj_menu</object>
     <objects name="menubuttons">
