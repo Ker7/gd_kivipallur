@@ -31,6 +31,15 @@
     </sprites>
     <sprite>sprites\sprPileOfThrow</sprite>
     <sprite>sprites\sprImbiThrow</sprite>
+    <sprite>sprites\sprImbiWave</sprite>
+    <sprite>sprites\sprCrowd</sprite>
+    <sprites name="gFase1">
+      <sprite>sprites\sprPlayerWalk1</sprite>
+      <sprite>sprites\sprPlayerHit1</sprite>
+      <sprite>sprites\sprPlayerIdle1</sprite>
+      <sprite>sprites\sprPlayerHb1</sprite>
+      <sprite>sprites\sprPlayerKick1</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\backPeople</background>
@@ -51,6 +60,8 @@
       <script>scripts\bloodSpawn.gml</script>
       <script>scripts\playerCollision.gml</script>
       <script>scripts\resetToPlayerIdle.gml</script>
+      <script>scripts\actionPointStep.gml</script>
+      <script>scripts\script30.gml</script>
     </scripts>
     <scripts name="ammoGenerator">
       <script>scripts\ammoGeneratorCreate.gml</script>
@@ -80,6 +91,12 @@
       <script>scripts\menuStep.gml</script>
       <script>scripts\menuDraw.gml</script>
     </scripts>
+    <scripts name="crowd">
+      <script>scripts\crowdStep.gml</script>
+      <script>scripts\crowdDraw.gml</script>
+      <script>scripts\crowdCreate.gml</script>
+    </scripts>
+    <script>scripts\ammoPlayerActionCheck.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\sys</object>
@@ -96,6 +113,8 @@
       <object>objects\btn_newgame</object>
       <object>objects\btn_quit</object>
     </objects>
+    <object>objects\obj_crowd</object>
+    <object>objects\playerActionPoint</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\mainmenu</room>

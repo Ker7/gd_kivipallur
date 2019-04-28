@@ -27,12 +27,12 @@ if (keyboard_check_pressed( btnHeadbutt ) && isKicking == false && isHeadbutting
 if keyboard_check( btnMoveRight ) { x += playerMoveSpeed;}
 if keyboard_check( btnMoveLeft ) { x -= playerMoveSpeed;}
 if keyboard_check_pressed( btnMoveUp) && currentLane > 0 {
-    y -= global.laneYStep
-    currentLane -= 1 
+    y -= global.laneYStep;
+    currentLane -= 1 ;
     }
 if keyboard_check_pressed( btnMoveDown ) && currentLane < 2  { 
-    y += global.laneYStep
-    currentLane +=1
+    y += global.laneYStep;
+    currentLane +=1;
     }
 
 if (!keyboard_check( btnMoveRight ) && 
@@ -40,7 +40,17 @@ if (!keyboard_check( btnMoveRight ) &&
     !keyboard_check( btnMoveUp ) &&
     !keyboard_check( btnMoveDown )) {isWalking = false } else {isWalking = true}
 
-if (isWalking) { spriteSub = animationSpeed * sys.ct} //If walking -> variable that defines to GIF image counter aka Subimage
+if (isWalking) { 
+    mainSprite = sprRightWalking;
+    spriteSub = animationSpeed * sys.ct;
+    } //If walking -> variable that defines to GIF image counter aka Subimage
+
+if (!isWalking && !isKicking && !isHeadbutting) {
+    spriteSub = animationSpeed * sys.ct;
+    mainSprite = sprIdling;
+    //sprite_index = sprIdling ? sprite_index = sprIdling : sprite_index;
+    //if 
+}
 
 playerActions()
 playerCollision()
