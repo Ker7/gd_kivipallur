@@ -22,6 +22,15 @@ with (ammo) {
     if (isFlying && !hasHit && targetLane == player.currentLane) {
         if (place_meeting(x-4, y+4, player)) {
         hasHit = true;
+                
+        playerHeight = other.sprite_height
+        with instance_create(other.x, y, obj_Blood){
+            
+            depth = -1000;
+            direction = 45+random(90);
+            speed = 5+random(1);
+            gravity = 1;
+        }
         //speed = 0;
         //gravity = 0;
         
@@ -54,14 +63,27 @@ if (!keyboard_check( btnMoveRight ) &&
 if (isWalking) { spriteSub = animationSpeed * sys.ct} //If walking -> variable that defines to GIF image counter aka Subimage
 
 if (isKicking) {
+    // Sprite
     spriteSub += 1/room_speed*16
     
-    if spriteSub >= 11 {
+    if spriteSub >= image_number {
         isKicking = false;
         isWalking = false;
-        // switch back to default sprite
-        mainSprite = sprRightWalking
+        mainSprite = sprRightWalking // switch back to default sprite
         spriteSub =  0;
+    }
+    
+    
+    // Kick collision
+    with instance_nearest(x, y-50, ammo) {
+    
+        dist = distance_to_object( other ); //how far is the nearest ammo?
+        if dist <= 80 && !hasHit {
+            if other.spriteSub > 2 && other.spriteSub < 7 // sync hit with certain subframes
+            speed = 20;
+            direction = 45 //TODO add some random
+            
+        }
     }
 }
 
