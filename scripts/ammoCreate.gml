@@ -3,6 +3,7 @@
 isFlying = true;
 fadeCounter = 2;    //Alpha 1 can be seen, will start to fade after landed
 hasHit = false;
+hitByPlayer = false;
 hasLanded = false;
 
 gravity = 0.24;
@@ -29,10 +30,11 @@ switch(stoneSize) {
 cnt = 0 //Second counter for ammo age, if age +1s : valid for earth collision check
 
 // Shadow Making
-dist__var = 8;
+dist_var = 8;
 for (i = 0; i < 8; i += 1) {
-shadX[i] = -dist__var*1.1+random(dist__var*2.2)
-shadY[i] = -dist__var+random(dist__var*1.8)
+    shadX[i] = -dist_var*1.1+random(dist_var*2.2)
+//   shadY[i] = -dist_var+random(dist_var*1.8)
+    shadY[i] = 2*dist_var
 }
 
 //debugging

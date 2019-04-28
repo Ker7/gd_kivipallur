@@ -39,6 +39,10 @@
       <script>scripts\playerCreate.gml</script>
       <script>scripts\playerStep.gml</script>
       <script>scripts\playerDraw.gml</script>
+      <script>scripts\playerActions.gml</script>
+      <script>scripts\bloodSpawn.gml</script>
+      <script>scripts\playerCollision.gml</script>
+      <script>scripts\resetToPlayerIdle.gml</script>
     </scripts>
     <scripts name="ammoGenerator">
       <script>scripts\ammoGeneratorCreate.gml</script>

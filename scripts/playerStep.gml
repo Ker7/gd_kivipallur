@@ -42,92 +42,14 @@ if (!keyboard_check( btnMoveRight ) &&
 
 if (isWalking) { spriteSub = animationSpeed * sys.ct} //If walking -> variable that defines to GIF image counter aka Subimage
 
-
-// ----- K I C K -------------
-if (isKicking) {
-    // Sprite
-    spriteSub += 1/room_speed*16
-    
-    if spriteSub >= image_number {
-        isKicking = false;
-        isWalking = false;
-        mainSprite = sprRightWalking // switch back to default sprite
-        spriteSub =  0;
-    }
-    
-    
-    // Kick collision
-    with instance_nearest(x, y-50, ammo) {
-        dist = distance_to_object( other ); //how far is the nearest ammo?
-        if dist <= 80 && !hasHit && targetLane == player.currentLane {
-            if other.spriteSub > 2 && other.spriteSub < 7 // sync hit with certain subframes
-            speed = 10;
-            direction = 75+random(15) //TODO add some random 
-            score += 5;
-        }
-    }
-}
-
-// ----- HEADBUTT -----
-if (isHeadbutting) {
-    show_debug_message("HEADBUTT")
-    // Sprite
-    spriteSub += 1/room_speed*16
-    
-    if spriteSub >= image_number {
-        isHeadbutting = false;
-        isWalking = false;
-        mainSprite = sprRightWalking // switch back to default sprite
-        spriteSub =  0;
-    }
-    
-    // collision
-    with instance_nearest(x, y, ammo) {
-        dist = distance_to_object( other ); //how far is the nearest ammo?
-        if dist <= 80 && !hasHit && targetLane == player.currentLane {
-            if other.spriteSub > 1 && other.spriteSub < 6 // sync hit with certain subframes
-            speed = 15;
-            direction = 45 //TODO add some random 
-            score += 10;
-        }
-    }
-}
+playerActions()
+playerCollision()
 
 xscale = 1-(abs(800-y)/800);
 yscale = xscale;
 playerMoveSpeed = 3*xscale;
 
-with (ammo) {
-    if (isFlying && !hasHit && targetLane == player.currentLane) {
-        if (place_meeting(x-4, y+4, player)) {
-        hasHit = true;
-             
-        var ammoDir = direction;
-        // Blood splatter   
-        repeat (8) {
-            with instance_create(other.x, y, obj_Blood){
-                depth = -1000;
-                direction = 75+random(30);
-                speed = 4+random(1);
-                gravity = 0.5;
-            }
-        }
-        
-        // Player IQ decrease
-        health -= 5;//TODO get from rock type
-        
-        
-        //speed = 0;
-        //gravity = 0;
-        
-        // Ammo movement
-        
-        direction = 68+random(10);
-        speed = 5+random(1);
-        gravity = 1;
-        }
-    }
-}
+
 switch(currentLane) {
 case(0): mask_index = sprPlayerMask0; break;
 case(1): mask_index = sprPlayerMask1; break;
