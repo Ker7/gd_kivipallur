@@ -18,7 +18,7 @@ sys.difficulty = 0;
 obj_player = instance_create(200,600,player)
 
 instance_create(0,0,ammoGenerator)
-instance_create(0,0, eventListener)
+//instance_create(0,0, eventListener) // can be used to generate UI messages when difficulty changes etc
 
 obj_player.iq = 147;
 obj_player.playerMoveSpeed = 4;
