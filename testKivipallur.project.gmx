@@ -42,6 +42,9 @@
       <sprite>sprites\sprPlayerHb1</sprite>
       <sprite>sprites\sprPlayerKick1</sprite>
     </sprites>
+    <sprites name="quotes">
+      <sprite>sprites\quoteText_newgame</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\backPeople</background>
@@ -63,7 +66,6 @@
       <script>scripts\playerCollision.gml</script>
       <script>scripts\resetToPlayerIdle.gml</script>
       <script>scripts\actionPointStep.gml</script>
-      <script>scripts\script30.gml</script>
       <script>scripts\playerKnockout.gml</script>
     </scripts>
     <scripts name="ammoGenerator">
@@ -122,9 +124,9 @@
     </objects>
     <object>objects\obj_crowd</object>
     <object>objects\playerActionPoint</object>
+    <object>objects\jurtoQuoterText</object>
     <object>objects\jurtoQuoter</object>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\mainmenu</room>
     <room>rooms\room0</room>
