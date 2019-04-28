@@ -1,5 +1,6 @@
 
 depth = -global.lanes[targetLane]
+heightAlphaDecrease = (global.lanes[targetLane] - y)/600
 cnt += 1/room_speed
 rot += rotspeed
 
@@ -13,6 +14,7 @@ if (path_position = 1) {isFlying = 0}
 
 // Landing on ground
 if cnt>1 &&  y>global.lanes[targetLane] {
+        y = global.lanes[targetLane];
         speed = 0;
         gravity = 0;
         isFlying = false;

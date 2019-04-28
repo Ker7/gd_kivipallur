@@ -1,7 +1,7 @@
 //Draw The Shadow
 //draw_sprite_ext(sprAmmoShadow1,0,x+128,laneY[targetLane],1,1,1,c_black,0.4)  
-for (i = 0; i < 8; i += 1) {
-    draw_sprite_ext(sprAmmoShadow1,0,x+shadX[i],global.lanes[targetLane]+shadY[i],1,1,1,c_white,fadeCounter-1/8)
+for (i = 0; i < shadows; i += 1) {
+    draw_sprite_ext(sprAmmoShadow1,0,x+shadX[i],global.lanes[targetLane]+shadY[i],1,1,1,c_white,(fadeCounter-1)-heightAlphaDecrease)
 }
 if (hasLanded) { 
     draw_sprite_general(sprite_index, stoneSize, ddleft, ddtop, sprite_width, sprite_height, x+ddx,y+ddy, 1, -1, rot, c_white, c_white, c_white, c_white, fadeCounter);
@@ -11,6 +11,7 @@ if (hasLanded) {
 
 // Debug 
 if (debug_mode) {
+draw_text(x+96,y,"y:"+string(y));
 //draw_sprite_part_ext(sprite,    subimg,     left,   top,    width,          height,         x,  y,  xscale, yscale, colour,     alpha);
 //draw_sprite_part_ext(sprAmmo1,  stoneSize,  32,      32,     sprite_width,   sprite_height,  x,  y,  1,      -1,     c_white,    fadeCounter);
   
