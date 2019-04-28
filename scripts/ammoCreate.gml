@@ -11,6 +11,8 @@ speed = 14+random(1);
 rot = 0;
 rotspeed = random_range(-4, 4);
         
+glow=false;
+
 //targetLane = 2;//irandom(2);
 targetLane = irandom(2);
 //stoneSize = 2; //if stonesize

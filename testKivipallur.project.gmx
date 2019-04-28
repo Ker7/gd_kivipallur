@@ -24,8 +24,10 @@
     <sprite>sprites\sprBlood</sprite>
   </sprites>
   <backgrounds name="background">
-    <background>background\background0</background>
-    <background>background\background1</background>
+    <background>background\backPeople</background>
+    <background>background\backGrass</background>
+    <background>background\back_fieldCrop</background>
+    <background>background\background8</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path0</path>

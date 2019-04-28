@@ -7,10 +7,10 @@ ct = 0              // Global time clock
 ammoCount = 0       // Shots fired
 
 // Lanes (For Players and Ammo)
-global.laneYStep = 64
-global.lanes[0] = 476
-global.lanes[1] = global.lanes[0] + global.laneYStep
-global.lanes[2] = global.lanes[1] + global.laneYStep
+global.laneYStep = 84
+global.lanes[2] = 604;                                      // 476
+global.lanes[1] = global.lanes[2] - global.laneYStep        // 540
+global.lanes[0] = global.lanes[1] - global.laneYStep        // 604
 
 // World creation
 obj_player = instance_create(200,600,player)
