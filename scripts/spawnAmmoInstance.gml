@@ -8,7 +8,7 @@ show_debug_message("Spawning object: " + string(argument0));
 
 var ammo_instance = instance_create(
     AMMO_X,
-    random_range(AMMO_Y_MIN, AMMO_Y_MAX),
+    global.lanes[1], // middle lane
     argument0
     );
 ammo_instance.gravity = 0.3;

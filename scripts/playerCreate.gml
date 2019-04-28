@@ -1,5 +1,6 @@
 // Create
 score = 0;
+health = 90;
 playerMoveSpeed = 3 //Default value, reassigned in sys Creation
 currentLane = 1 //index: [0..2]
 
@@ -11,10 +12,10 @@ btnMoveRight = vk_right;
 btnMoveLeft = vk_left;
 btnMoveUp = vk_up;
 btnMoveDown = vk_down;
-
 btnKick = ord('Z')
-btnPunch = ord('X')
-btnHeadbutt = ord('C')
+btnHeadbutt = ord('X')
+//btnPunch = ord('X') TODO: consider to remove
+
 
 btnSend = vk_space;
 
@@ -23,9 +24,11 @@ s=0                     //counter for ammo shots fired //unnecissary
 sprRightWalking = sprPlayerRW;  //Player skin init
 //sprLeftWalking = sprPlayerLW;
 
-sprRightKicking = sprKickR;
+sprKicking = sprKickR;
+sprHeadbutting = sprPlayerRHeadHit;
 
 isKicking = false;
+isHeadbutting = false;
 isWalking = false;          //For playing an animation or hold still subimage 0
 isFacingRight = true;       // for fliping side of image left/right
 animationSpeed = 16    // * [n] - 1 frame per second, 2 - frames per second, floating point
