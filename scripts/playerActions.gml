@@ -10,7 +10,7 @@ if (isKicking) {
             if other.spriteSub > 2 && other.spriteSub < 7 { // sync hit with certain subframes
 
                 hitByPlayer = true;
-                obj_crowd.ticksToCheer += 30
+                obj_crowd.ticksToCheer += 40
                 speed = 10;
                 direction = 75+random(15) //TODO add some random 
                 score += 5;
@@ -29,10 +29,9 @@ if (isHeadbutting) {
     with ammo {
         if ammoPlayerActionCheck(player.ACTION_RANGE) {
             if other.spriteSub > 1 && other.spriteSub < 6 { // sync hit with certain subframes
-
                 hitByPlayer = true;
                 
-                obj_crowd.ticksToCheer += 30
+                obj_crowd.ticksToCheer += 40
                 speed = 15;
                 direction = 45 //TODO add some random 
                 score += 10;

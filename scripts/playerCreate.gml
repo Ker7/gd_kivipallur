@@ -34,6 +34,7 @@ isKicking = false;
 isHeadbutting = false;
 isWalking = false;          //For playing an animation or hold still subimage 0
 isFacingRight = true;       // for fliping side of image left/right
+ticksKnockedOut = 0 // how many ticks the player stays knocked out
 animationSpeed = 16    // * [n] - 1 frame per second, 2 - frames per second, floating point
 
 //Sprite Part
