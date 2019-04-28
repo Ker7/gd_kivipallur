@@ -21,7 +21,7 @@ if cnt>1 &&  y>global.lanes[targetLane] {
         rot = 0;
 }
 
-if (!isFlying) { fadeCounter -= 0.006; } 
+if (!isFlying || hasHit) { fadeCounter -= 0.006; } 
 if (fadeCounter < 0) {instance_destroy(); }
 /*
 if keyboard_check(vk_numpad7) { ddtop -= 1; }

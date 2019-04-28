@@ -4,9 +4,9 @@ for (i = 0; i < 4; i += 1) {
     draw_sprite_ext(sprAmmoShadow1,0,x+shadX[i],global.lanes[targetLane]+shadY[i],1,1,1,c_white,fadeCounter-1)
 }
 if (hasLanded) { 
-    draw_sprite_general(sprAmmo1, stoneSize, ddleft, ddtop, sprite_width, sprite_height, x+ddx,y+ddy, 1, -1, rot, c_white, c_white, c_white, c_white, fadeCounter);
+    draw_sprite_general(sprite_index, stoneSize, ddleft, ddtop, sprite_width, sprite_height, x+ddx,y+ddy, 1, -1, rot, c_white, c_white, c_white, c_white, fadeCounter);
   } else {
-    draw_sprite_ext(sprAmmo1,stoneSize,x,y,1.1,1.1,rot,c_aqua,1); 
+    draw_sprite_ext(sprite_index,stoneSize,x,y,1.1,1.1,rot,c_white,1); 
 }
 
 // Debug 

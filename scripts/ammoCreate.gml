@@ -13,6 +13,8 @@ rotspeed = random_range(-4, 4);
         
 glow=false;
 
+// sprite_index = 
+
 //targetLane = 2;//irandom(2);
 targetLane = irandom(2);
 //stoneSize = 2; //if stonesize
