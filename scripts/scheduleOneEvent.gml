@@ -11,8 +11,8 @@ ds_map_add(event_map, ammoEvent, argument0);
 ds_list_sort(event_id_list, true);
 
 
-//show_debug_message("Created new event at " + string(ammoEvent));
+show_debug_message("Scheduled ammo at " + string(ammoEvent));
 
-show_debug_message("Earliest queued event is " + string(ds_list_find_value(event_id_list, 0)));
+//show_debug_message("Earliest queued event is " + string(ds_list_find_value(event_id_list, 0)));
 
 return ammoEvent;
