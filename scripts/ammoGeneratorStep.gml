@@ -3,7 +3,7 @@
 // Schedule new events (new wave) if there are none!
 if ds_list_empty(event_id_list)  {
     if (sys.waveCooldown > 0){
-        show_debug_message("Cooling down Wave" + string(sys.waveCooldown))
+//        show_debug_message("Cooling down Wave" + string(sys.waveCooldown))
         sys.waveCooldown -= 1
     } else {
         // Cooldown over, spawn new ammo
@@ -14,8 +14,7 @@ if ds_list_empty(event_id_list)  {
 
         //How many to schedule?        
         for (var i = 0; i < ammo_count; i++;){
-            scheduleOneEvent(ammo, (i*WAVE_TIME_PER_ROCK)+WAVE_ROCK_BUFFER, WAVE_TIME_PER_ROCK)
-        
+            scheduleOneEvent(ammo, i*(WAVE_TIME_PER_ROCK+WAVE_ROCK_BUFFER), WAVE_TIME_PER_ROCK)
             //script_execute(scheduleOneEvent, ammo, INTER_WAVE_PAUSE, INTER_WAVE_PAUSE + (WAVE_DURATION * sys.difficulty));
         }
         // set cooldown which is used once above events finish
@@ -26,11 +25,12 @@ if ds_list_empty(event_id_list)  {
 } 
 
     // Spawn ammo if an event has been scheduled for this timestamp
-    if (ds_list_find_value(event_id_list, 0) <= global.c){
+    var nextEventTime = ds_list_find_value(event_id_list, 0)
+    if (nextEventTime <= global.c){
     //show_debug_message("New event");
     
     makeRandomStone();
     //remove from datastructures
     ds_list_delete(event_id_list, 0)
-    ds_map_delete(event_map, global.c)    
+    ds_map_delete(event_map, nextEventTime)  
    }

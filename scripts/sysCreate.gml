@@ -14,7 +14,7 @@ global.lanes[0] = global.lanes[1] - global.laneYStep        // 604
 
 
 
-sys.difficulty = 10;
+sys.difficulty = 0;
 sys.waveCooldown = 100;
 
 

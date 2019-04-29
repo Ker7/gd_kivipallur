@@ -2,5 +2,5 @@
 //arg0 - minimum_delay
 //arg1 - max_delay
 
-var newTime = irandom_range(argument0, argument1);
+var newTime = irandom_range(argument0,  argument0+argument1);
 return global.c + newTime;
