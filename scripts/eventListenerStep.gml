@@ -1,4 +1,5 @@
 
+
 if sys.difficulty != lastDifficulty {
     show_debug_message("New Wave ");
     lastDifficulty = sys.difficulty

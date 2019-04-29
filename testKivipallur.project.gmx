@@ -34,6 +34,8 @@
     <sprite>sprites\sprImbiThrow</sprite>
     <sprite>sprites\sprImbiWave</sprite>
     <sprite>sprites\sprCrowd</sprite>
+    <sprite>sprites\sprJurto</sprite>
+    <sprite>sprites\sprJurtoTalking</sprite>
     <sprites name="gFase1">
       <sprite>sprites\sprPlayerIdle1</sprite>
       <sprite>sprites\sprPlayerWalk1</sprite>
@@ -61,6 +63,9 @@
       <sprite>sprites\sprPlayerHb4</sprite>
       <sprite>sprites\sprPlayerKick4</sprite>
       <sprite>sprites\sprPlayerHit4</sprite>
+    </sprites>
+    <sprites name="quotes">
+      <sprite>sprites\quoteText_newgame</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -121,6 +126,10 @@
       <script>scripts\crowdCreate.gml</script>
     </scripts>
     <script>scripts\ammoPlayerActionCheck.gml</script>
+    <scripts name="quoter">
+      <script>scripts\quoterCreate.gml</script>
+      <script>scripts\quoterStep.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\sys</object>
@@ -139,6 +148,8 @@
     </objects>
     <object>objects\obj_crowd</object>
     <object>objects\playerActionPoint</object>
+    <object>objects\jurtoQuoterText</object>
+    <object>objects\jurtoQuoter</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
