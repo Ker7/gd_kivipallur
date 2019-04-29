@@ -134,11 +134,13 @@
     <scripts name="quoter">
       <script>scripts\quoterCreate.gml</script>
       <script>scripts\quoterStep.gml</script>
+      <script>scripts\quoterDraw.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
     <font>fonts\font1</font>
+    <font>fonts\old_press</font>
   </fonts>
   <objects name="objects">
     <object>objects\sys</object>
