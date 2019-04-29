@@ -4,7 +4,7 @@ isFlying = true;
 fadeCounter = 2;    //Alpha 1 can be seen, will start to fade after landed
 heightAlphaDecrease = 0 //Stone is touching its targetY so no remove of transparency
 hasHit = false;
-hitByPlayer = false;
+//hitByPlayer = false;
 hasLanded = false;
 
 gravity = 0.24;
