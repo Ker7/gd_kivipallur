@@ -10,13 +10,11 @@ if ds_list_empty(event_id_list)  {
     
         sys.difficulty += 1
         var ammo_count = sys.difficulty
-        
-        intervalPerRock = WAVE_DURATION / ammo_count
-        
+               
 
         //How many to schedule?        
         for (var i = 0; i < ammo_count; i++;){
-            scheduleOneEvent(ammo, (i*intervalPerRock)+WAVE_ROCK_BUFFER, (i+1)*intervalPerRock)
+            scheduleOneEvent(ammo, (i*WAVE_TIME_PER_ROCK)+WAVE_ROCK_BUFFER, WAVE_TIME_PER_ROCK)
         
             //script_execute(scheduleOneEvent, ammo, INTER_WAVE_PAUSE, INTER_WAVE_PAUSE + (WAVE_DURATION * sys.difficulty));
         }
