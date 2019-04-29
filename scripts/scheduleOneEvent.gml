@@ -3,7 +3,7 @@
 // arg1 - min delay
 // arg2 - max delay
 // an ammo event is uniquely identified by its timestamp in event_id_list and event_map
-ammoEvent = script_execute(getTimestamp, argument1, argument2);
+ammoEvent = getTimestamp(argument1, argument2)
 
 
 ds_list_add(event_id_list, ammoEvent);
