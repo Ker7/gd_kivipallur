@@ -52,6 +52,7 @@
   </views>
   <instances>
     <instance objName="obj_menu" x="416" y="352" name="inst_17DA7D66" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objMainMenuImbiLehvitab" x="864" y="640" name="inst_8CAAE7E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

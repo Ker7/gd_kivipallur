@@ -1,4 +1,6 @@
 // Draw 
+
+    draw_set_font(font1);
 draw_text(1,1,"
 c: "+ string(global.c) +"
 ct: "+ string(ct) +"
@@ -15,10 +17,11 @@ ticks: "+ string(player.ticksKnockedOut) +"");
 draw_healthbar( 300, room_height-50, room_width-300, room_height-15, 
     health,c_white,c_red,c_red,180,true,true);
 
+    draw_set_font(font0);
 // Score
 draw_text_transformed_colour(
     20, room_height-50,
-    "Lõbu" + string ( score),
+    "Feim: " + string ( score),
     2,2,0,
     0,0,200,255,
     1
@@ -27,7 +30,7 @@ draw_text_transformed_colour(
 // Difficulty
 draw_text_transformed_colour(
     room_width-200, room_height-50,
-    "Stage: " + string ( sys.difficulty),
+    "Tase: " + string ( sys.difficulty),
     2,2,0,
     0,0,255,200,
     1

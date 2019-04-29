@@ -1,26 +1,26 @@
 
 //If there will come 4 states, then use thenext row, Else 3 is ok
-hpState = ceil(health / (100/3)) // Remains an integer portraying a state !IF there will befome 3 states!
-//hpState = ceil(health / 25) // Remains an integer portraying a state
+//hpState = ceil(health / (100/3)) // Remains an integer portraying a state !IF there will befome 3 states!
+hpState = ceil(health / 25) // Remains an integer portraying a state
 
 //show_debug_message("state"+string(hpState))
 switch(hpState) {
-    case(3):
+    case(4):
         sprRightWalking = sprPlayerWalk1
         sprIdling = sprPlayerIdle1
         sprHeadbutting = sprPlayerHb1
         sprKicking = sprPlayerKick1
         sprHit = sprPlayerHit1
     break;
-    case(2):
+    case(3):
         sprRightWalking = sprPlayerWalk2
         sprIdling = sprPlayerIdle2
         sprHeadbutting = sprPlayerHb2
         sprKicking = sprPlayerKick2
         sprHit = sprPlayerHit2
     break;
-    case(99):   //Dummy value for the moment
-        sprRightWalking = sprPlayerWalk1
+    case(2):   //Dummy value for the moment
+        sprRightWalking = sprPlayerWalk3
         sprIdling = sprPlayerIdle3
         sprHeadbutting = sprPlayerHb3
         sprKicking = sprPlayerKick3

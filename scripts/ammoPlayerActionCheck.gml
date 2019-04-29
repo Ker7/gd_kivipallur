@@ -4,6 +4,6 @@ return (
     x >= player.x &&
      !hasHit &&
      !hasLanded &&
-     !hitByPlayer &&
+     //!hitByPlayer &&
      targetLane == player.currentLane
      )

@@ -100,17 +100,17 @@ if keyboard_check_pressed( btnSend ) {
         }
     }
     if (keyboard_check(vk_numpad3)) {
-        with (instance_create(850, 639-32-64, ammo)) {
+        with (makeRandomStone()) {
         targetLane = 2;        sys.ammoCount += 1;
         }
     }
     if (keyboard_check(vk_numpad6)) {
-        with ( instance_create(850, 639-32-64, ammo)) {
+        with ( makeRandomStone() ) {
         targetLane = 1;        sys.ammoCount += 1;
         }
     }
     if (keyboard_check(vk_numpad9)) {
-        with instance_create(850, 639-32-64, ammo){
+        with ( makeRandomStone() ) {
         targetLane = 0;       sys.ammoCount += 1;
         }
     }

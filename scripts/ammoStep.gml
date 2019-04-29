@@ -21,6 +21,7 @@ if cnt>1 &&  y>global.lanes[targetLane] {
         hasLanded = true;
         rotspeed = 0;
         rot = 0;
+        score-=1;
 }
 
 if (!isFlying || hasHit) { fadeCounter -= 0.006; } 

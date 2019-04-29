@@ -33,6 +33,7 @@
     <sprite>sprites\sprPileOfThrow</sprite>
     <sprite>sprites\sprImbiThrow</sprite>
     <sprite>sprites\sprImbiWave</sprite>
+    <sprite>sprites\sprAnvil</sprite>
     <sprite>sprites\sprCrowd</sprite>
     <sprite>sprites\sprJurto</sprite>
     <sprite>sprites\sprJurtoTalking</sprite>
@@ -67,6 +68,8 @@
     <sprites name="quotes">
       <sprite>sprites\quoteText_newgame</sprite>
     </sprites>
+    <sprite>sprites\sprite50</sprite>
+    <sprite>sprites\sprIntroScene</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\backPeople</background>
@@ -84,19 +87,21 @@
       <script>scripts\playerStep.gml</script>
       <script>scripts\playerDraw.gml</script>
       <script>scripts\playerActions.gml</script>
-      <script>scripts\bloodSpawn.gml</script>
       <script>scripts\playerCollision.gml</script>
+      <script>scripts\bloodSpawn.gml</script>
       <script>scripts\resetToPlayerIdle.gml</script>
       <script>scripts\actionPointStep.gml</script>
       <script>scripts\checkLane.gml</script>
       <script>scripts\playerKnockout.gml</script>
       <script>scripts\playerHealthCheck.gml</script>
+      <script>scripts\ammoPlayerActionCheck.gml</script>
     </scripts>
     <scripts name="ammoGenerator">
       <script>scripts\ammoGeneratorCreate.gml</script>
       <script>scripts\ammoGeneratorStep.gml</script>
       <script>scripts\getTimestamp.gml</script>
       <script>scripts\scheduleOneEvent.gml</script>
+      <script>scripts\makeRandomStone.gml</script>
     </scripts>
     <scripts name="sys">
       <script>scripts\sysStep.gml</script>
@@ -125,24 +130,30 @@
       <script>scripts\crowdDraw.gml</script>
       <script>scripts\crowdCreate.gml</script>
     </scripts>
-    <script>scripts\ammoPlayerActionCheck.gml</script>
     <scripts name="quoter">
       <script>scripts\quoterCreate.gml</script>
       <script>scripts\quoterStep.gml</script>
     </scripts>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\font0</font>
+    <font>fonts\font1</font>
+  </fonts>
   <objects name="objects">
     <object>objects\sys</object>
     <object>objects\player</object>
     <object>objects\ammo</object>
     <object>objects\ammo1</object>
+    <object>objects\ammo2</object>
     <object>objects\ammoGenerator</object>
     <object>objects\obj_Blood</object>
+    <object>objects\obj_Blood2</object>
     <object>objects\eventListener</object>
     <object>objects\obj_Pile</object>
     <object>objects\obj_Imbi</object>
     <object>objects\obj_menu</object>
     <objects name="menubuttons">
+      <object>objects\obj_splashScreen</object>
       <object>objects\btn_newgame</object>
       <object>objects\btn_quit</object>
     </objects>
@@ -150,9 +161,11 @@
     <object>objects\playerActionPoint</object>
     <object>objects\jurtoQuoterText</object>
     <object>objects\jurtoQuoter</object>
+    <object>objects\objMainMenuImbiLehvitab</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
+    <room>rooms\splash</room>
     <room>rooms\mainmenu</room>
   </rooms>
   <help>

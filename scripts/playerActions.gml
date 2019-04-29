@@ -1,19 +1,15 @@
 // ----- K I C K -------------
 if (isKicking) {
-    // Sprite
-    spriteSub += 1/room_speed*16
-    if spriteSub >= image_number {  resetToPlayerIdle()  }
-
     // Kick collision
     with ammo {
         if ammoPlayerActionCheck(player.ACTION_RANGE){
             if other.spriteSub > 2 && other.spriteSub < 7 { // sync hit with certain subframes
-
-                hitByPlayer = true;
+                hasHit = true;
                 obj_crowd.ticksToCheer += 40
                 speed = 10;
                 direction = 75+random(15) //TODO add some random 
-                score += 5;
+                health-=1
+                score += 5 * ( abs(100-health)/100 ) + 1 ; 
             }
         }
     }
@@ -21,21 +17,24 @@ if (isKicking) {
 
 // ----- HEADBUTT -----
 if (isHeadbutting) {
-    // Sprite
-    spriteSub += 1/room_speed*16
-    if spriteSub >= image_number {  resetToPlayerIdle()  }
-        
     // collision
     with ammo {
         if ammoPlayerActionCheck(player.ACTION_RANGE) {
             if other.spriteSub > 1 && other.spriteSub < 6 { // sync hit with certain subframes
-                hitByPlayer = true;
-                
+                hasHit = true;
                 obj_crowd.ticksToCheer += 40
-                speed = 15;
-                direction = 45 //TODO add some random 
-                score += 10;
+                speed = 13;
+                direction = 45 +random(15)
+                health-=1
+                score += 10 * ( abs(100-health)/100 ) + 1 ; 
             }
         }
     }
+}
+
+// --- Common hits
+if (isKicking || isHeadbutting) {
+    // Sprite
+    spriteSub += 1/room_speed*16
+    if spriteSub >= image_number {  resetToPlayerIdle()  }
 }

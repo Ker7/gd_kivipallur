@@ -52,7 +52,7 @@
   </views>
   <instances>
     <instance objName="sys" x="192" y="128" name="inst_E41DE870" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Imbi" x="864" y="480" name="inst_2B54698C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Imbi" x="896" y="528" name="inst_2B54698C" locked="0" code="" scaleX="0.391414135694504" scaleY="0.420253157615662" colour="4294967295" rotation="0"/>
     <instance objName="obj_Pile" x="1104" y="560" name="inst_0298C128" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>

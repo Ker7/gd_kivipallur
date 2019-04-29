@@ -22,8 +22,10 @@ glow=false;
 
 //targetLane = 2;//irandom(2);
 targetLane = irandom(2);
+
 //stoneSize = 2; //if stonesize
 stoneSize = irandom(2); //if stonesize
+
 switch(stoneSize) {
     case(0): mask_index = sprAmmoMaskStone0; break;
     case(1): mask_index = sprAmmoMaskStone1; break;
