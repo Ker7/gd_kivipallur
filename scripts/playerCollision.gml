@@ -7,14 +7,16 @@ with (ammo) {
         // Blood splatter   
         bloodSpawn((stoneSize+1)* 3, obj_Blood) // argument- no of splatters
         bloodSpawn((stoneSize+1)* 3, obj_Blood2) // argument- no of splatters
+        playBloodHit();
         
         // knockout
         if stoneSize > 0 && player.ticksKnockedOut<0.01 {
             playerKnockout()
+            playPainSound();
         }
         
         // Player IQ decrease
-        health -= 5;//TODO get from rock type
+        health -= (5+(stoneSize+1));//TODO get from rock type
                
         // Ammo movement
         direction = 68+random(10);

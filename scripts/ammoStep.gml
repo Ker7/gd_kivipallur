@@ -12,6 +12,7 @@ if (direction>135) {
 
 if (path_position = 1) {isFlying = 0}
 
+
 // Landing on ground
 if cnt>1 &&  y>global.lanes[targetLane] {
         y = global.lanes[targetLane];
@@ -21,6 +22,7 @@ if cnt>1 &&  y>global.lanes[targetLane] {
         hasLanded = true;
         rotspeed = 0;
         rot = 0;
+        audio_play_sound(sndRockLand,10,false);
         if (!hasHit) {score -= 1};
 //        score -= hasHit == true ? 1 : 0;
 }

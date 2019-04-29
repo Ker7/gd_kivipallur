@@ -14,12 +14,16 @@ if (!isAlive) {
         //Fall rocks
         if (instance_number(objFatality)==0) {
         instance_create(x,y-720,objFatality); 
+        audio_play_sound(sndAjuRebu,1,false);
         
         }
     }
 
     spriteSub = animationSpeed * sys.ct;
     mainSprite = sprIdling;
+    instance_destroy(ammoGenerator);
+    instance_destroy(jurtoQuoter);
+    instance_destroy(jurtoQuoterText);
     return false;   // Exit the step when knocked out, no collision checks!!!
     }
 

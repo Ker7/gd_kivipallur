@@ -4,7 +4,25 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sndRockHit</sound>
+    <sound>sound\sndBloodHit</sound>
+    <sound>sound\sndBloodHit2</sound>
+    <sound>sound\sndBloodHit3</sound>
+    <sound>sound\sndRockLand</sound>
+    <sound>sound\sndLegSwing</sound>
+    <sound>sound\sndCrowdBack</sound>
+    <sound>sound\sndCrowdCheerLeg</sound>
+    <sound>sound\sndCrowdCheerHead</sound>
+    <sound>sound\sndLook1</sound>
+    <sound>sound\sndLook2</sound>
+    <sound>sound\sndLook3</sound>
+    <sound>sound\sndLook4</sound>
+    <sound>sound\sndGameStart</sound>
+    <sound>sound\sndGameStop</sound>
+    <sound>sound\sndAjuRebu</sound>
+    <sound>sound\sndGlass</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprPlayerLW</sprite>
     <sprite>sprites\sprPlayerRW</sprite>
@@ -15,6 +33,8 @@
     <sprite>sprites\sprPlayerMask2</sprite>
     <sprite>sprites\sprAmmoKivid</sprite>
     <sprite>sprites\sprFata</sprite>
+    <sprite>sprites\sprFataBlod</sprite>
+    <sprite>sprites\sprJyrtoPikutab</sprite>
     <sprite>sprites\sprAmmoMask1</sprite>
     <sprite>sprites\sprAmmoShadow1</sprite>
     <sprite>sprites\sprite20</sprite>
@@ -70,7 +90,7 @@
       <sprite>sprites\quoteText_newgame</sprite>
     </sprites>
     <sprite>sprites\sprite50</sprite>
-    <sprite>sprites\sprIntroScene</sprite>
+    <sprite>sprites\sprIntroSceneC</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\backPeople</background>
@@ -96,6 +116,8 @@
       <script>scripts\playerKnockout.gml</script>
       <script>scripts\playerHealthCheck.gml</script>
       <script>scripts\ammoPlayerActionCheck.gml</script>
+      <script>scripts\playPainSound.gml</script>
+      <script>scripts\playBloodHit.gml</script>
     </scripts>
     <scripts name="ammoGenerator">
       <script>scripts\ammoGeneratorCreate.gml</script>
@@ -165,6 +187,7 @@
     <object>objects\playerActionPoint</object>
     <object>objects\jurtoQuoterText</object>
     <object>objects\jurtoQuoter</object>
+    <object>objects\objJyrtoMainPikutab</object>
     <object>objects\objMainMenuImbiLehvitab</object>
   </objects>
   <rooms name="rooms">

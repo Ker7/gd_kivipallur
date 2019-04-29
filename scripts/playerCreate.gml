@@ -1,7 +1,7 @@
 // Create
 
 actionPoint = instance_create(x,y, playerActionPoint)
-ACTION_RANGE = 100
+ACTION_RANGE = 80
 score = 0;
 health = 100;
 playerMoveSpeed = 3 //Default value, reassigned in sys Creation
@@ -9,6 +9,7 @@ currentLane = 1 //index: [0..2]
 
 y = global.lanes[currentLane]
 
+//sound_loop(sndCrowdBack)
 
 // keys
 btnMoveRight = vk_right;

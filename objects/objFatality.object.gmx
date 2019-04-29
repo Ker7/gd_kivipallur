@@ -33,6 +33,28 @@
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>scale = 0;
+scoreIsSet = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="3" enumb="0">
       <action>
@@ -51,13 +73,152 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if y&gt;player.y {
+            <string>if y&gt;player.y-96 {
+    player.visible = false;
+    if (scale &lt; 1) {
+    scale += 0.01;
+    }
+}
+
+if y&gt;player.y {
     gravity=0;
     speed=0;
+}
+
+if (scale &gt; 0.8 &amp;&amp; !scoreIsSet) {
+    scoreIsSet = true;
+    if (score &gt; highscore_value(10)) {
+        //name = get_string("Okei, anna nimi hea skoor oli","JRK")
+        highscore_add(get_string("Hea Skoor! Ütle nimi","Jyrka"), score);
+    }
 }
 </string>
           </argument>
         </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+
+//Draw slowbloo0d under
+draw_sprite_ext(sprFataBlod,0,x,y,scale,scale,0,c_white,1)
+//draw_sprite_stretched(sprFataBlod,0,x,y,scale,scale)
+//draw_sprite_stretched(sprFataBlod,0,x,y+150,200,200)
+
+// Draw stone
+draw_sprite(sprite_index,0,x,y)
+
+if (scale &gt; 0.9) {
+    draw_set_colour(c_black);
+    draw_set_alpha(0.6);
+    draw_roundrect(60, 60, room_width - 60, room_height - 60,false);
+    draw_set_alpha(0.9);
+    draw_set_colour(c_white);
+    draw_highscore(100, 100, room_width - 100, room_height - 100);
+    draw_set_alpha(1);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>612</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if_variable</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>scale</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0.9</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>2</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//audio_play_sound(sndGameStop,1,false);
+show_message('Misnäppid igast asjuu!?');
+
+show_message('Ok tee uuesti');
+room_restart();
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
   </events>

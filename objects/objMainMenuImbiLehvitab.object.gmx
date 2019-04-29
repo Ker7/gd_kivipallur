@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>image_speed=0.3
+image_xscale=-image_xscale;
 </string>
           </argument>
         </arguments>

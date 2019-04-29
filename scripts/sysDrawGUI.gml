@@ -1,7 +1,7 @@
 // Draw 
 
     draw_set_font(font1);
-draw_text(1,1,"
+draw_text(1,3331,"
 c: "+ string(global.c) +"
 ct: "+ string(ct) +"
 FPS: "+ string(fps) +"
@@ -29,7 +29,7 @@ draw_text_transformed_colour(
     
 // Difficulty
 draw_text_transformed_colour(
-    room_width-200, room_height-50,
+    room_width-240, room_height-50,
     "Tase: " + string ( sys.difficulty),
     2,2,0,
     0,0,255,200,

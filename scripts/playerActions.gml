@@ -1,5 +1,6 @@
 // ----- K I C K -------------
 if (isKicking) {
+    if (!audio_is_playing(sndLegSwing)) { audio_play_sound(sndLegSwing,20,false); }
     // Kick collision
     with ammo {
         if ammoPlayerActionCheck(player.ACTION_RANGE){
@@ -10,6 +11,9 @@ if (isKicking) {
                 direction = 75+random(15) //TODO add some random 
                 health-=1
                 score += 5 * ( abs(100-health)/100 ) + 1 ; 
+                audio_play_sound(sndCrowdCheerLeg, 20, false);
+                playPainSound();
+                playBloodHit();
             }
         }
     }
@@ -27,6 +31,9 @@ if (isHeadbutting) {
                 direction = 45 +random(15)
                 health-=1
                 score += 10 * ( abs(100-health)/100 ) + 1 ; 
+                audio_play_sound(sndCrowdCheerHead, 20, false)
+                playPainSound();
+                playBloodHit();
             }
         }
     }

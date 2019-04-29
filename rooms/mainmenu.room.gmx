@@ -3,8 +3,8 @@
   <caption></caption>
   <width>1080</width>
   <height>720</height>
-  <vsnap>32</vsnap>
-  <hsnap>32</hsnap>
+  <vsnap>4</vsnap>
+  <hsnap>4</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -53,6 +53,8 @@
   <instances>
     <instance objName="obj_menu" x="416" y="352" name="inst_17DA7D66" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objMainMenuImbiLehvitab" x="864" y="640" name="inst_8CAAE7E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_splashScreen" x="0" y="0" name="inst_63397701" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJyrtoMainPikutab" x="228" y="548" name="inst_B5C3C01E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
