@@ -1,33 +1,49 @@
 // event scheduled for this step?
 
-// Schedule new events (new ave) if there are none!
-if ds_list_empty(event_id_list){
-    //How many to schedule?
-    sys.difficulty += 1
+// Schedule new events (new wave) if there are none!
+if ds_list_empty(event_id_list)  {
+    if (sys.waveCooldown > 0){
+        show_debug_message("Cooling down Wave" + string(sys.waveCooldown))
+        sys.waveCooldown -= 1
+    } else {
+        // Cooldown over, spawn new ammo
     
-    var ammo_count = sys.difficulty
-    //show_debug_message("Difficulty= "+ string(difficulty_mod) +", Scheduling " + string(ammo_count) + " new events");
-    for (var i = 0; i < ammo_count; i++;){
-        script_execute(scheduleOneEvent, ammo, INTER_WAVE_PAUSE, INTER_WAVE_PAUSE + (WAVE_DURATION * sys.difficulty));
+        sys.difficulty += 1
+        var ammo_count = sys.difficulty
+        
+        intervalPerRock = WAVE_DURATION / ammo_count
+        
+
+        //How many to schedule?        
+        for (var i = 0; i < ammo_count; i++;){
+            scheduleOneEvent(ammo, (i*intervalPerRock)+WAVE_ROCK_BUFFER, (i+1)*intervalPerRock)
+        
+            //script_execute(scheduleOneEvent, ammo, INTER_WAVE_PAUSE, INTER_WAVE_PAUSE + (WAVE_DURATION * sys.difficulty));
+        }
+        // set cooldown which is used once above events finish
+        sys.waveCooldown = INTER_WAVE_PAUSE
+    
     }
     
 
-}
+} 
 
 
-// Spawn ammo if an event has been scheduled for this timestamp
-if (ds_list_find_value(event_id_list, 0) <= global.c){
-    //show_debug_message("New event");
-    
-    var rand = random(1);
-    var type;
-    
-    if rand >= 0.66 { type = ammo1 }
-    else { type = ammo };
-    script_execute(spawnAmmoInstance, type);
-    //remove from datastructures
-    ds_list_delete(event_id_list, 0)
-    ds_map_delete(event_map, global.c)    
-    
-    
-}
+    // Spawn ammo if an event has been scheduled for this timestamp
+    if (ds_list_find_value(event_id_list, 0) <= global.c){
+        //show_debug_message("New event");
+        
+        var rand = random(1);
+        var type;
+        
+        if rand >= 0.66 { type = ammo1 }
+        else { type = ammo };
+        script_execute(spawnAmmoInstance, type);
+        //remove from datastructures
+        ds_list_delete(event_id_list, 0)
+        ds_map_delete(event_map, global.c)    
+        
+        
+   }
+
+

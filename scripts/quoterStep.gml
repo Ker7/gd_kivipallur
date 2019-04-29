@@ -10,7 +10,9 @@ if (quoteScheduled){
 
 if (visible){
     if quoteCooldown < 0 {
+        // kill quote
         visible = false
+        instance_destroy(jurtoQuoterText)
     }
     else {
         quoteCooldown -= 1
