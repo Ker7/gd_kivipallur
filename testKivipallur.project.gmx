@@ -14,6 +14,7 @@
     <sprite>sprites\sprPlayerMask1</sprite>
     <sprite>sprites\sprPlayerMask2</sprite>
     <sprite>sprites\sprAmmoKivid</sprite>
+    <sprite>sprites\sprFata</sprite>
     <sprite>sprites\sprAmmoMask1</sprite>
     <sprite>sprites\sprAmmoShadow1</sprite>
     <sprite>sprites\sprite20</sprite>
@@ -150,6 +151,7 @@
     <object>objects\obj_Blood2</object>
     <object>objects\eventListener</object>
     <object>objects\obj_Pile</object>
+    <object>objects\objFatality</object>
     <object>objects\obj_Imbi</object>
     <object>objects\obj_menu</object>
     <objects name="menubuttons">
@@ -164,9 +166,9 @@
     <object>objects\objMainMenuImbiLehvitab</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
     <room>rooms\splash</room>
     <room>rooms\mainmenu</room>
+    <room>rooms\room0</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

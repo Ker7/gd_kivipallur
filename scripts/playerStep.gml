@@ -6,6 +6,23 @@ if ticksKnockedOut > 0 {
     ticksKnockedOut-=0.7;
     return false;   // Exit the step when knocked out, no collision checks!!!
 }
+
+// Health got below 0! Mabye not necissary this variable even... 
+if (!isAlive) {
+    lingerCounter -= 1/room_speed;
+    if lingerCounter < 0 {
+        //Fall rocks
+        if (instance_number(objFatality)==0) {
+        instance_create(x,y-720,objFatality); 
+        
+        }
+    }
+
+    spriteSub = animationSpeed * sys.ct;
+    mainSprite = sprIdling;
+    return false;   // Exit the step when knocked out, no collision checks!!!
+    }
+
 //Check to change the main health style/template
 playerHealthCheck()
 

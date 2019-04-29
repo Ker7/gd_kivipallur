@@ -1,8 +1,8 @@
 
 //If there will come 4 states, then use thenext row, Else 3 is ok
 //hpState = ceil(health / (100/3)) // Remains an integer portraying a state !IF there will befome 3 states!
-hpState = ceil(health / 25) // Remains an integer portraying a state
-
+hpState = ceil(health / 25); // Remains an integer portraying a state
+if (health<=0) { isAlive = false }
 //show_debug_message("state"+string(hpState))
 switch(hpState) {
     case(4):

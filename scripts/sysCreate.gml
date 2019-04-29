@@ -28,5 +28,5 @@ instance_create(0,0, eventListener) // can be used to generate UI messages when 
 instance_create(0,0, jurtoQuoter);
 
 obj_player.iq = 147;
-obj_player.playerMoveSpeed = 4;
+obj_player.playerMoveSpeed = 5;
 
