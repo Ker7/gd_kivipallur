@@ -1,9 +1,14 @@
 // Step
 depth = -y
 if ticksKnockedOut > 0 {
-    ticksKnockedOut-=1;
-    return false;
+    mainSprite = sprHit;
+    spriteSub = (image_number * ((30-ticksKnockedOut)/30)) // animationSpeed * sys.ct;
+    ticksKnockedOut-=0.7;
+    return false;   // Exit the step when knocked out, no collision checks!!!
 }
+//Check to change the main health style/template
+playerHealthCheck()
+
 // After keypress reset subimage and mabye change direction of sprite /2 sides
 if (keyboard_check_pressed( btnMoveRight ) || keyboard_check_released( btnMoveRight ))  { spriteSub = 0;}
 if (keyboard_check_pressed( btnMoveLeft ) || keyboard_check_released( btnMoveLeft ))   { spriteSub = 0;}
@@ -37,12 +42,15 @@ if keyboard_check_pressed( btnMoveDown ) && currentLane < 2  {
     y += global.laneYStep;
     currentLane +=1;
     }
-
+checkLane();    // Changes the main player collision mask after lane change!
+    
+// For the Animation ==
 if (!keyboard_check( btnMoveRight ) && 
     !keyboard_check( btnMoveLeft ) &&
     !keyboard_check( btnMoveUp ) &&
     !keyboard_check( btnMoveDown )) {isWalking = false } else {isWalking = true}
 
+// == Walking
 if (isWalking) { 
     mainSprite = sprRightWalking;
     spriteSub = animationSpeed * sys.ct;
@@ -63,13 +71,13 @@ yscale = xscale;
 playerMoveSpeed = 3*xscale;
 
 
-switch(currentLane) {
+
+/*switch(currentLane) {
 case(0): mask_index = sprPlayerMask0; break;
 case(1): mask_index = sprPlayerMask1; break;
 case(2): mask_index = sprPlayerMask2; break;
-default: break;
-}
-
+default: break;}
+*/
 
 //Testarea DEBUG BUILD STUFF
 if (true){ //(debug_mode) {

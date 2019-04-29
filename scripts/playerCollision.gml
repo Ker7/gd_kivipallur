@@ -8,7 +8,7 @@ with (ammo) {
         bloodSpawn(8) // 8 splatters
         
         // knockout
-        if stoneSize > 0 {
+        if stoneSize > 0 && player.ticksKnockedOut<0.01 {
             playerKnockout()
         }
         

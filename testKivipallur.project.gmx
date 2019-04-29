@@ -24,6 +24,7 @@
     <sprite>sprites\sprAmmo2</sprite>
     <sprite>sprites\sprKickR</sprite>
     <sprite>sprites\sprBlood</sprite>
+    <sprite>sprites\sprBloodOld</sprite>
     <sprite>sprites\sprImbi</sprite>
     <sprites name="menu">
       <sprite>sprites\spr_newgame</sprite>
@@ -34,11 +35,32 @@
     <sprite>sprites\sprImbiWave</sprite>
     <sprite>sprites\sprCrowd</sprite>
     <sprites name="gFase1">
-      <sprite>sprites\sprPlayerWalk1</sprite>
-      <sprite>sprites\sprPlayerHit1</sprite>
       <sprite>sprites\sprPlayerIdle1</sprite>
+      <sprite>sprites\sprPlayerWalk1</sprite>
       <sprite>sprites\sprPlayerHb1</sprite>
       <sprite>sprites\sprPlayerKick1</sprite>
+      <sprite>sprites\sprPlayerHit1</sprite>
+    </sprites>
+    <sprites name="gFase2">
+      <sprite>sprites\sprPlayerIdle2</sprite>
+      <sprite>sprites\sprPlayerWalk2</sprite>
+      <sprite>sprites\sprPlayerKick2</sprite>
+      <sprite>sprites\sprPlayerHb2</sprite>
+      <sprite>sprites\sprPlayerHit2</sprite>
+    </sprites>
+    <sprites name="gFase3">
+      <sprite>sprites\sprPlayerIdle3</sprite>
+      <sprite>sprites\sprPlayerWalk3</sprite>
+      <sprite>sprites\sprPlayerHb3</sprite>
+      <sprite>sprites\sprPlayerKick3</sprite>
+      <sprite>sprites\sprPlayerHit3</sprite>
+    </sprites>
+    <sprites name="gFase4">
+      <sprite>sprites\sprPlayerIdle4</sprite>
+      <sprite>sprites\sprPlayerWalk4</sprite>
+      <sprite>sprites\sprPlayerHb4</sprite>
+      <sprite>sprites\sprPlayerKick4</sprite>
+      <sprite>sprites\sprPlayerHit4</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -61,8 +83,9 @@
       <script>scripts\playerCollision.gml</script>
       <script>scripts\resetToPlayerIdle.gml</script>
       <script>scripts\actionPointStep.gml</script>
-      <script>scripts\script30.gml</script>
+      <script>scripts\checkLane.gml</script>
       <script>scripts\playerKnockout.gml</script>
+      <script>scripts\playerHealthCheck.gml</script>
     </scripts>
     <scripts name="ammoGenerator">
       <script>scripts\ammoGeneratorCreate.gml</script>
@@ -118,8 +141,8 @@
     <object>objects\playerActionPoint</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\mainmenu</room>
     <room>rooms\room0</room>
+    <room>rooms\mainmenu</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

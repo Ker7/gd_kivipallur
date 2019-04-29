@@ -8,8 +8,11 @@ hitByPlayer = false;
 hasLanded = false;
 
 gravity = 0.24;
-direction = 112-random(10);
-speed = 14+random(1);
+//direction = 112-random(10);
+//speed = 14+random(1);
+direction = 110;
+speed = 12+irandom(2)*1.5;
+
 rot = 0;
 rotspeed = random_range(-4, 4);
         

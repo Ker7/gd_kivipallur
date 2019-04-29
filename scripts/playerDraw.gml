@@ -1,7 +1,5 @@
 // Draw 
-rot = 0
-if (ticksKnockedOut > 0) { rot = 110} 
-draw_sprite_ext(mainSprite,spriteSub,x,y,xscale,yscale,rot,c_white,1);
+draw_sprite_ext(mainSprite,spriteSub,x,y,xscale,yscale,1,c_white,1);
 
 //draw_text(x,y,string(x-xprevious));
 

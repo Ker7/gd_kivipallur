@@ -24,11 +24,12 @@ btnSend = vk_space;
 
 s=0                     //counter for ammo shots fired //unnecissary
 
-sprRightWalking = sprPlayerWalk1;  //Player skin init
-
+//Player skin init
+sprRightWalking = sprPlayerWalk1;  
 sprIdling = sprPlayerIdle1;
 sprHeadbutting = sprPlayerHb1;
 sprKicking = sprPlayerKick1;
+sprHit = sprPlayerHit1;
 
 isKicking = false;
 isHeadbutting = false;

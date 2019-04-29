@@ -5,7 +5,11 @@ ct: "+ string(ct) +"
 FPS: "+ string(fps) +"
 FPSreal: "+ string(fps_real) +"
 instances: "+ string(instance_count) +"
-health: "+ string(health) +"");
+health: "+ string(health) +"
+playerImageindex: "+ string(player.image_index) +"
+ticks: "+ string(player.ticksKnockedOut) +"");
+
+//player.ticksKnockedOut
 
 // Healthbar
 draw_healthbar( 300, room_height-50, room_width-300, room_height-15, 
@@ -14,7 +18,7 @@ draw_healthbar( 300, room_height-50, room_width-300, room_height-15,
 // Score
 draw_text_transformed_colour(
     20, room_height-50,
-    "Score: $" + string ( score),
+    "Lõbu" + string ( score),
     2,2,0,
     0,0,200,255,
     1

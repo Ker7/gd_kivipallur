@@ -16,6 +16,8 @@ var ammo_instance = instance_create(
 //ammo_instance.speed = 11+random(1);
 // New down
 ammo_instance.gravity = 0.24;
-ammo_instance.direction = 112-random(10);
-ammo_instance.speed = 14+random(1);
+ammo_instance.direction = 110;
+ammo_instance.speed = 12+irandom(2)*1.5;
+
+obj_Imbi.image_speed = (player.animationSpeed/room_speed)
 return ammo_instance;
