@@ -19,12 +19,7 @@ if ds_list_empty(event_id_list){
 if (ds_list_find_value(event_id_list, 0) <= global.c){
     //show_debug_message("New event");
     
-    var rand = random(1);
-    var type;
-    
-    if rand >= 0.66 { type = ammo1 }
-    else { type = ammo };
-    script_execute(spawnAmmoInstance, type);
+    makeRandomStone();
     //remove from datastructures
     ds_list_delete(event_id_list, 0)
     ds_map_delete(event_map, global.c)    

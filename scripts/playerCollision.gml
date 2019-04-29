@@ -5,7 +5,8 @@ with (ammo) {
              
         var ammoDir = direction;
         // Blood splatter   
-        bloodSpawn((stoneSize+1)* 3) // argument- no of splatters
+        bloodSpawn((stoneSize+1)* 3, obj_Blood) // argument- no of splatters
+        bloodSpawn((stoneSize+1)* 3, obj_Blood2) // argument- no of splatters
         
         // knockout
         if stoneSize > 0 && player.ticksKnockedOut<0.01 {

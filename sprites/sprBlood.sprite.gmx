@@ -7,10 +7,10 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>84</bbox_left>
+  <bbox_left>19</bbox_left>
   <bbox_right>221</bbox_right>
   <bbox_top>50</bbox_top>
-  <bbox_bottom>204</bbox_bottom>
+  <bbox_bottom>283</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -23,5 +23,7 @@
     <frame index="0">images\sprBlood_0.png</frame>
     <frame index="1">images\sprBlood_1.png</frame>
     <frame index="2">images\sprBlood_2.png</frame>
+    <frame index="3">images\sprBlood_3.png</frame>
+    <frame index="4">images\sprBlood_4.png</frame>
   </frames>
 </sprite>

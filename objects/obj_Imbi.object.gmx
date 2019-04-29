@@ -93,7 +93,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite(sprite_index,image_index,x,y)
+            <string>draw_sprite_ext(sprite_index,image_index,x,y,0.7,0.7,0,c_white,1)
 </string>
           </argument>
         </arguments>
