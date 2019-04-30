@@ -87,9 +87,9 @@ if y&gt;player.y {
 
 if (scale &gt; 0.8 &amp;&amp; !scoreIsSet) {
     scoreIsSet = true;
-    if (score &gt; highscore_value(10)) {
+    if (score &gt;= highscore_value(10)) {
         //name = get_string("Okei, anna nimi hea skoor oli","JRK")
-        highscore_add(get_string("Hea Skoor! Ütle nimi","Jyrka"), score);
+        highscore_add(get_string("Hea Skoor! Ütle nimi","Jürto"), score);
     }
 }
 </string>
@@ -198,10 +198,11 @@ if (scale &gt; 0.9) {
           <argument>
             <kind>1</kind>
             <string>//audio_play_sound(sndGameStop,1,false);
-show_message('Misnäppid igast asjuu!?');
+//show_message('Ok tee uuesti');
+//room_restart();
+sound_stop_all()
+room_goto(1)
 
-show_message('Ok tee uuesti');
-room_restart();
 </string>
           </argument>
         </arguments>
